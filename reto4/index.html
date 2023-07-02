@@ -15,7 +15,13 @@
         <div>
             <ul><!-- u: unorder l: list [lista no ordenada]-[lista ordenada] sería <ol><li>item 1</li></ol>-->
                 <!-- pondremos los botones rojos en una lista horizontal -->
-                <li>All shows</li>
+                <li>
+                    <!-- a : ancla ; href : te permite navegar-->
+                    <!-- cuando la página te lleva fuera de nuestro producto por target esto hace que no se vaya -->
+                    <a href="https://github.com" target="_blank">Recurso externo</a> 
+                    <a href="reto4.png">Recurso interno</a>
+                    <a href="#footer">Navegación otra página</a> <!-- el "id" es único por eso #footer irá al id="footer"-->
+                </li>
                 <li>Sign in</li>
             </ul>
         </div>
@@ -30,7 +36,7 @@
             <p>Ready to Watch?</p>
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <!--
             inline-block :: span, b, strong, <em>, i, label, etc
             estas etiquetas permiten modificar cosas sin perder
