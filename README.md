@@ -1,3 +1,3 @@
-# Repositorio clases Bootcamp Html Css
+# Repositorio Fundamentos Html Css
 
 Día 1 - 

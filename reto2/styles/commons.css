@@ -1,0 +1,6 @@
+/* clase inventada ".main-bg" se utiliza en <body>*/
+.main-bg {
+    /*background-color: black; /* fondo del <body>*/
+    color: white; /* todo lo de dentro del <body class="main-bg"> hereda la clase*/
+    margin: 0;      /* Los márgenes de doto el boy a cero */
+}

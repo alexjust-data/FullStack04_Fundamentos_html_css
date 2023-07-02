@@ -1,0 +1,34 @@
+/* * *
+ * :root {} Es una forma de establecer variables personalizadas 
+ *          que pueden ser utilizadas en todo el documento.
+ *          Es útil si quiers definir ya unos colora por default.
+ */
+:root {
+    /* variable personalizada, el nombre es inventado */
+    --main-bg-color: black;
+    --main-text-color: white;
+    --main-brand-color: red;                      /*para los botones*/
+    --main-brand-color-light: rgb(227, 130, 130); /*para cuanto pasemor por encima del botón*/
+    font-family: sans-serif;                        /* utilizará estas */
+}
+
+/* clase inventada ".main-bg" se utiliza en <body>*/
+.main-bg {
+    background-color: var(--main-bg-color); /* utilizo la variable personalizada*/
+    color: var(--main-text-color); /* todo lo de dentro del <body class="main-bg"> hereda la clase*/
+    margin: 0;      /* Los márgenes de todo el <body> a cero */
+    opacity: 1;
+
+/* afecta a todos los elementos (*) del documento */
+* {
+    box-sizing: border-box;
+    /* el tamaño especificado para el ancho y alto 
+    de un elemento se aplica al contenido interno, 
+    y cualquier borde o relleno se agregará al ancho 
+    y alto especificado. */
+    
+    /* Al utilizar border-box, no es necesario ajustar 
+    manualmente el tamaño de los elementos para tener en 
+    cuenta los bordes y rellenos, ya que se incluyen en el 
+    tamaño total */
+}

@@ -1,0 +1,26 @@
+/* clase inventada ".footer" se utiliza para <footer>*/
+.footer {
+    text-align: center;           /* alinear textos horizontalmente */
+    font-style: unset;            /* forma a todos los textos de footer */
+    background-color: black;    /* fondo */
+    padding: 50px 10px 10px 10px; /* espacio estre contenido_caja y borde */
+    /*padding: 10px;*/            /* los cuatro bordes igual */
+    border: 1px dashed red;     /* medida clase color */
+    border-radius: 50px;           /* efecto */ /*cuadrado->50%->circulo*/
+    /*margin: 80px 0 0 0 ;         /* margin==padding */
+    /* ojo con margin: si pones dos bloques seguidos, los margins se superponen */
+    margin-bottom: 5px;            /* kevin utiliza siempre un margin botton */
+}
+
+/* clase ".footer__company" un grado más de especificidad en footer*/
+/* https://getbem.com/introduction/     <-- convención */
+/*sólo modifica los .footer__company pero que estén dentro de footer*/
+.footer .footer__company {
+    font-style: normal;
+    color: red;
+}
+
+/*todos los P parrafos que están dentro del footer*/
+.footer p {
+    margin: 0%;  /*es el recuadro naranja del inspector*/
+}

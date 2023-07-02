@@ -1,0 +1,39 @@
+
+/**
+* El Banner es la foto compuesta de carátulas
+*/
+.banner {
+    /* es un 25% de toda la pantalla independientemente de varíe*/
+    height: 75vh;          /* defino donde irá la foto de fondo */
+    text-align: center;
+    position: relative;    /* va unido al position: absolute; de la
+                              image, para que esté dentro del banner*/
+}
+
+.banner .banner__content {
+    z-index: 1;
+    position: relative; /*cambiamos la posición estática para que se vea
+                          nos lo ha indicado la inspección web*/
+}
+
+/***
+* posición absoluta : le dices que puede pornerse donde quiera
+                       pero hay que jugar con la posición: 
+                       top, left, right, bottom
+* posición fija : aunque hagas scroll está fijo
+*/
+.banner .banner__image {
+    position: absolute; /*Intenta buscar el nodo o bloque con 
+                          posición relativa más cercana. Se pierde 
+                          si el banner de arriba no le poner relativa*/
+    /* Si no pones tamaño verás la foto */
+ /*  width: 200px;        /* ancho */ 
+ /*  height: 200px;       /* altura */ 
+    top: 0;               /* movimientos de la caja/foto*/
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../../assets/app/catalog.jpg);
+    z-index: 0;
+    opacity: 0.5;          /* Nos afecta también al texto ?? */
+}

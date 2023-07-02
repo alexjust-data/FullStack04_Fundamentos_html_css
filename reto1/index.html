@@ -1,0 +1,52 @@
+<!--
+    cuando comienzas un proyecto html pon al inicio html:5 para comenzar con la cabecera, nunca se hace a mao
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- En 1. hemos añadido el estilo sóla para la etiqueta <p style=""> -->
+    <!-- 2. styles head. Ésta etiqueta si nos permite editar estilos-->
+    <style>
+        /*selectores hay muchos, pero quédate ahora con tres: tag, class, id.
+        Permiten seleccionar y aplicar estilos a elementos específicos de una 
+        página web. Los selectores en CSS se utilizan para identificar los elementos 
+        HTML a los que se desea aplicar un estilo determinado.*/
+        
+        /* -> id  -> tiene que ser identificadores unicos [#textito])*/
+        #textito {color: green }
+
+        /* -> tag : modificamos el stilo de h2 -> (0, 0, 1)*/
+        h2 { color:blue; } /* buscará todos los h2 y los modificará */
+        p { color:chocolate } /* buscará todos los p y los modificar *//*
+        p { color:rgb(68, 33, 8) !important } /* ganrá a 1. styles en linea */
+
+        /* -> class : buscará el atributi class que tenga el valor "alex" */
+        .alex { color:coral }
+
+    </style>
+</head>
+<body>
+    <h1>cuerpo</h1>
+    <h2>Título</h2>
+    <!--.alex { color:coral } lo pinta naranja (0, 0, 1)-->
+    <!--#textito { color:greenl } le gana a naranja (1, 0, 0)-->
+    <p class="alex" id="textito">Lorem, ipsum dolor sit amet consectetur 
+adipisicing elit. Quibusdam earum rem odio tenetur corporis fugiat harum? 
+Optio fugiat a harum aut expedita eius quasi atque! Fugiat voluptas laudantium 
+doloribus corporis.</p>
+    <!-- 1. styles en linea, si o si el párrafo en rojo: ojo! -->
+    <p style="color:brown">Lorem ipsum dolor sit amet consectetur adipisicing 
+elit. Voluptate nulla exercitationem dolores voluptates magni iure harum 
+reprehenderit nihil deserunt quibusdam hic et velit, perspiciatis nemo 
+similique est id fugit molestias?</p>
+    <!--p { color:chocolate }-->
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam 
+praesentium molestiae, vero libero provident earum quisquam, a ipsa dicta 
+impedit dignissimos obcaecati eum ex culpa necessitatibus cumque exercitationem 
+assumenda soluta?</p>
+</body>
+</html>
