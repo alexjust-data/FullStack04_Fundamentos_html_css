@@ -1,0 +1,58 @@
+/***
+* En la web original el header se queda fijo
+* y todo lo demás acompaña al scrol
+*/
+.header {
+    position: sticky; /* juega con todas las posiciones y escoje una. 
+    En este caso es para que no nos ponga en contenido de capa 1 banner 
+    por debajo de la capa 2 header*/
+    background-color: var(---main-bg-color);
+    z-index: 999; /* mira la capa "banner.css", ponle uno arriba (o valor alto)*/
+    top: 0; /* para que quede ajustado arriba */
+    /*bottom: 0; /* para que quede ajustadp abajo */
+
+    /*** COLOCO EL display: flex; EN LA CAJA PADRE
+     *** esta se encarga de mover las cajas de dentro */
+     display: flex;
+     justify-content:space-between;
+     align-self: center;
+    /*** le doy un poco de aire, margen al bottom*/
+     padding: 25px;
+    
+}
+
+
+.header 
+.header__image{
+    width: 150px;  /* tamaño caja */
+}
+
+
+.header 
+.header__image 
+img {
+    width: 100%;  /* para que me agrande y empequeñezca al unísono */
+}
+
+
+.header 
+.header__nav 
+.header__nav__list {
+    list-style: none; /* le estamos quitanto los puntos a la lista,
+                        es decir, le quitamos el estilo a la lista*/
+}
+.header 
+.header__nav 
+.header__nav__list 
+.header__nav__list__item 
+a { /* si pusieras "> a" sólo se ven afectados justo despues de __item */
+    text-decoration: none; /* le quitamos el bajo linea */
+}
+
+/****
+* He tenido que poner esto porque "Sign" e "in" se 
+* separan en dos líneas, además he añadido al html
+* <span class="single-line">Sign in</span></a> */
+.single-line {
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
