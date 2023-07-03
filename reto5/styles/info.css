@@ -1,0 +1,27 @@
+
+
+
+
+.info__media {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 50px;
+    overflow: hidden; /* Esto evitará que el video se desborde del contenedor */
+}
+
+.info__media img {
+    width: 90%; 
+    z-index: 1;
+}
+
+.info__media video {
+    position: absolute;
+    width: 55%; 
+    top: 38px;
+    z-index: -1;
+    
+}
+
