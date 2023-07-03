@@ -5,8 +5,47 @@
 .btn {
     color: var(--main-text-color);
     background-color: var(--main-brand-color);
-    padding: 1%;
-    border-radius: 3px;
-
+    padding: 1%; /* le damos aire a los 4 margenes */
+    border-radius: 3px; /* redondeamos los cantos */
+    border: 1px solid var(--main-brand-color); /* le añadimos borde*/
 }
+
+/***
+* Con esta clase ocultaremos un boton Show all.
+* hidden va suelto sin nada más en
+* <a class="btn" href="#shows" hidden >
+*/
+.hidden {
+    display: none; /* desaparece */
+    /*visibility: hidden; /* invisibiliza */
+}
+
+/****** TACTICAS PARA ALINEAR
+******* [puedes aplicarlo a la caja entera o item interno]
+**********************************************************
+* - display: flex; [convocas al flex para lo de abajo]
+* ---------- HOTIZONTAL
+* - justify-content: center; [horizontal, en el centro]
+* - justify-content: flex-end; [horizontal final]
+* - justify-content: flex-start; [horizontal principio]
+* ----------- VERTICAL
+* - allign-items: center; [vertical centro]
+* - allign-items: flex-start; [vertical principio]
+* - allign-items: flex-end; [vertical final]
+* ----------- DISTIBUCIÓN
+* - justify-content: space-between; [separa hasta limites]
+* - justify-content: space-around; [lo reparte]
+* - justify-content: space-evenly; [lo reparte más distribuído]
+* ----------- MUCHAS LINEAS
+* - flex-wrap: wrap; [te coloca clips hacia abajo] 
+* - flex-wrap: nowrap;
+* ----------- CAMBIAMOS DIRECCIONES
+* - flex-direction: column; [lo pone todo en vertical]
+* ----------- SI QUEREMOS CAMBIAR UN SOLO ELEMENTO DE ALINEACIÓN EN EL CONTENEDOR
+* ponemos una clase nueva a un solo elemento: 
+* - align-self: center;
+* - align-self: flex-end;
++ - ...
+****/
+
 
