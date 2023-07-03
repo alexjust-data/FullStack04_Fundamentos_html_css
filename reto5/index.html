@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="styles/banner.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/info.css">
 </head>
 
 <body class="main-bg"> <!-- clase .main-bg del "commons.css"-->
@@ -43,20 +44,20 @@
                 <p>Ready to Watch?</p>
             </div>
         </section>
-            <div class="">
+        <section class="info">
+            <div class="info__text">
                 <h2>Watch everywhere</h2>
                 <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV</p>
             </div>
-            <div class="">
+            <div class="info__media">
                 <img src="../assets/app/device-pile.png" alt="video laptop">
                 <!-- "controls muted autoplay" son atributos booleanos -->
                 <video src="../assets/app/video-devices.m4v" controls muted autoplay loop>
                     <!-- Hacerlo así te permite cargar multiples formatos -->
-                    <source src="../assets/app/video-devices.m4v"> <source>
-                    <source src="../assets/app/video-devices.mp4"> <source>
+                    <source src="../assets/app/video-devices.m4v">
+                    <source src="../assets/app/video-devices.mp4">
                 </video>
             </div>
-        <section>
         </section>
     </main>
     <footer class="footer" id="footer">
