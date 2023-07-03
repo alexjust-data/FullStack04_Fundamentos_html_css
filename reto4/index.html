@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,33 +10,39 @@
     <link rel="stylesheet" href="styles/commons.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/banner.css">
+    <link rel="stylesheet" href="styles/header.css">
 </head>
+
 <body class="main-bg"> <!-- clase .main-bg del "commons.css"-->
-    <div>
-        <div>
-            <ul><!-- u: unorder l: list [lista no ordenada]-[lista ordenada] sería <ol><li>item 1</li></ol>-->
+    <header class="header">
+        <div class="header__image"><!-- caja nueva y nos traemos el logo -->
+            <img src="../assets/app/codeflix.png" alt="Logo Codeflix"><!-- sino carga imagen crea text:Logo Codeflix -->
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav__list"><!-- u: unorder l: list [lista no ordenada]-[lista ordenada] sería <ol><li>item 1</li></ol>-->
                 <!-- pondremos los botones rojos en una lista horizontal -->
-                <li>
+                <li class="header__nav__list__item">
                     <!-- a : ancla ; href : te permite navegar-->
                     <!-- cuando la página te lleva fuera de nuestro producto por target esto hace que no se vaya -->
-                    <a href="https://github.com" target="_blank">Recurso externo</a> 
-                    <a href="reto4.png">Recurso interno</a>
-                    <a href="#footer">Navegación otra página</a> <!-- el "id" es único por eso #footer irá al id="footer"-->
+                    <a lass="btn" href="#shows" target="_blank">Show all</a>
+                    <!-- el "id" es único por eso #footer irá al id="footer"-->
                 </li>
-                <li>Sign in</li>
+                <li class="header__nav__list__item">
+                    <a class="btn" href="sign-in.html">Sign in</a>
+                </li>
             </ul>
-        </div>
-    </div>
-    <div class="banner">
-        <div class="banner__image">
-
-        </div>
-        <div class="banner__content">
-            <h1>Unlimited movies, TV shows, and more</h1>
-            <h2>Watch anywhere, Cancel anytime</h2>
-            <p>Ready to Watch?</p>
-        </div>
-    </div>
+        </nav>
+    </header>
+    <main>
+        <section class="banner">
+            <div class="banner__image"></div>
+            <div class="banner__content">
+                <h1>Unlimited movies, TV shows, and more</h1>
+                <h2>Watch anywhere, Cancel anytime</h2>
+                <p>Ready to Watch?</p>
+            </div>
+        </section>
+    </main>
     <footer class="footer" id="footer">
         <!--
             inline-block :: span, b, strong, <em>, i, label, etc
@@ -44,8 +51,9 @@
         -->
         <!-- blanco herada class="main-bg"-->
         <!-- bloque "em" con letras cursivas-->
-        <p>2023 <em>codeflix</em> website</p> 
+        <p>2023 <em>codeflix</em> website</p>
         <p class="footer__company">Power by AlexJust</p>
     </footer>
 </body>
+
 </html>
