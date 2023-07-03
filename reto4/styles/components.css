@@ -1,0 +1,12 @@
+/***
+* Bloques o tags que se van a repetir en varias páginas
+*/
+
+.btn {
+    color: var(--main-text-color);
+    background-color: var(--main-brand-color);
+    padding: 1%;
+    border-radius: 3px;
+
+}
+
