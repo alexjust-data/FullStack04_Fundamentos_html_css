@@ -15,7 +15,7 @@
 * hidden va suelto sin nada más en
 * <a class="btn" href="#shows" hidden >
 */
-.hidden {
+.hidden-xs {
     display: none; /* desaparece */
     /*visibility: hidden; /* invisibiliza */
 }
