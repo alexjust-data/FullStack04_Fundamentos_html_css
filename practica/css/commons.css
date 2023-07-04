@@ -1,0 +1,18 @@
+/***
+ * :root {} para establecer variables personalizadas  */
+ :root {
+    --main-bg-color: fuchsia;
+    --main-text-color: white;
+    --main-brand-color: darkblue;                      /*para los botones*/
+    --main-brand-color-light: rgb(227, 130, 130); /*para cuanto pasemor por encima del botón*/
+    font-family: sans-serif;                        /* utilizará estas */
+}
+
+
+/* clase inventada ".main-bg" se utiliza en <body>*/
+.main-bg {
+    background-color: var(--main-text-color); 
+    color: var(--main-text-color); 
+    margin: 0;      
+    opacity: 1;
+}

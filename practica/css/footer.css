@@ -1,0 +1,7 @@
+
+.footer {
+    background-color: var(--main-bg-color);
+    text-align: center;           /* alinear textos horizontalmente */
+    position: flex;
+    allign-items: flex-end;
+}

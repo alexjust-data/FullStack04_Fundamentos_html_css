@@ -1,0 +1,56 @@
+
+/* Estilo para todos los botones */
+.button {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    margin: -1px;
+    border-radius: 50%;
+    text-decoration: none;
+    background-color: darkblue;
+    color: white;
+    transition: background-color 0.3s ease;
+    overflow: hidden;
+  }
+
+  /* botones anillas */
+  .button::before, .button::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background-color: transparent;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 0 6px #ff51cc;
+  }
+  .button::before {    /* botones anillas */
+    width: 40px; 
+    height: 40px;
+    z-index: 0;
+  }
+  .button::after {     /* botones anillas */
+    width: 60px;
+    height: 60px;
+    z-index: 1;
+  }
+
+/* boton central */
+  .button--large {     
+    width: 100px;
+    height: 100px;
+  }
+  .button--large::before { /* boton central */
+    width: 60px;
+    height: 60px;
+  }
+  .button--large::after { /* boton central */
+    width: 80px;
+    height: 80px;
+  }
+
+
