@@ -1,0 +1,29 @@
+
+.info {
+    max-width: 800px;
+    width: 90%;
+    max-width: 0 auto;
+
+    position: relative;
+    
+}
+
+.info 
+.info__text {
+
+}
+
+.info 
+.info__video {
+    position: relative;
+    display: flex;
+    justify-content: center; 
+}
+
+.info 
+.info__video
+img {
+    position: relative;
+    display: flex;
+    justify-content: center; 
+}
