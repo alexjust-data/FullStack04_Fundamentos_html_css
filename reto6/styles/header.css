@@ -70,6 +70,7 @@ a { /* si pusieras "> a" sólo se ven afectados justo despues de __item */
 /*****
 * CAMBIO DE TAMAÑO [al cambia el tamaño de la pantalla]
 * - lógica de actuación  (768px <= width)
+* - también aplicaría en vez de -width- a -height-
 */
 @media (768px <= width){
     .header 
