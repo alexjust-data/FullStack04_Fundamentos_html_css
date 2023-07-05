@@ -52,13 +52,15 @@
 /*****
 * CUANDO PASO EL RATON POR ENCIMA DEL ELEMENTO
 * - Selectores-> p:hover
-*/
+
 p:hover {
     color: yellow;
 }
 
 
-@media (hover:hover) {            /* si existe hover en el formato del usuario... */
-    p:hover {color: yellow;     /* aplica amarillo cuando pase por encima del <p> */
+@media (hover:hover) {            /* si existe hover en el formato del usuario... 
+    p:hover {color: yellow;       /* aplica amarillo cuando pase por encima del <p> 
     }
 }
+
+*/
