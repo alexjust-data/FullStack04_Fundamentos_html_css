@@ -1,0 +1,39 @@
+/***
+* Bloques o tags que se van a repetir en varias páginas
+*/
+
+.btn {
+    color: var(--main-text-color);
+    background-color: var(--main-brand-color);
+    padding: 10%; /* le damos aire a los 4 margenes */
+    border-radius: 3px; /* redondeamos los cantos */
+    border: 1px solid var(--main-brand-color); /* le añadimos borde*/
+}
+
+/***
+* Con esta clase ocultaremos un boton Show all.
+* hidden va suelto sin nada más en
+* <a class="btn" href="#shows" hidden >
+*/
+.header__nav__list__item .hidden-xs {
+    display: none; /* desaparece */
+    /*visibility: hidden; /* invisibiliza */
+}
+
+
+@media print {     /* se ejecuta en el print*/
+    * {
+        color: red; /* imprimirá *todas* las letras rojas*/
+    }
+}
+
+/* la clase se vería reflejada cuando tenga la lógica */
+@media screen and (min-width: 760px) and (max-width: 1199px){ /* min-width -> todo lo que está por encima de... */
+    .header__nav__list__item .hidden-xs{
+        display: block;  /*cuando "screen and (min-width: 760px)" 
+                                      la clase pasará de ser none a block*/
+    }
+}
+
+
+
