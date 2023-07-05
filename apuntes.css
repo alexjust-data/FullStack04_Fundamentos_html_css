@@ -7,9 +7,9 @@
 * - justify-content: flex-end; [horizontal final]
 * - justify-content: flex-start; [horizontal principio]
 * ----------- VERTICAL
-* - allign-items: center; [vertical centro]
-* - allign-items: flex-start; [vertical principio]
-* - allign-items: flex-end; [vertical final]
+* - align-items: center; [vertical centro]
+* - align-items: flex-start; [vertical principio]
+* - align-items: flex-end; [vertical final]
 * ----------- DISTIBUCIÓN
 * - justify-content: space-between; [separa hasta limites]
 * - justify-content: space-around; [lo reparte]
@@ -27,3 +27,15 @@
 * ----------- MARGEN DE SEPARACION ENTRE CAJAS
 * gap : 20px
 ****/
+
+
+
+/****** HERRAMIENTAS SIZE - 
+******* [https://semantic-ui.com/elements/container.html]  
+******* - depende del diseño entre tablet o telef, etc
+* - @media
+****/ 
+
+/* PUEDES MIRAR SI LAS HERRAMIENTAS FUNCIONAN EN OPERADORES
+https://caniuse.com/
+*/
