@@ -37,7 +37,7 @@
   @media (1024px <= width) {
     .info {
       display: flex;
-      flex-direction: row-reverse;
+      flex-direction: row-reverse; /* los contenedores se intercambian de lugar */
       align-items: center;
       max-width: 998px;
     }
