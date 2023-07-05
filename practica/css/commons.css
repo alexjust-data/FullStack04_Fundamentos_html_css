@@ -17,10 +17,10 @@
     margin: 0;      
     opacity: 1;
     position: fixed;
-    top: 0;  /*ajusto body a la pantalla relativa*/
-    left: 0; /*ajusto body a la pantalla relativa*/
-    width: 100%; /*ajusto body a la pantalla relativa*/
-    height: 100%; /*ajusto body a la pantalla relativa*/
+    top: 0;            /*ajusto body a la pantalla relativa*/
+    left: 0;           /*ajusto body a la pantalla relativa*/
+    width: 100%;       /*ajusto body a la pantalla relativa*/
+    height: 100%;      /*ajusto body a la pantalla relativa*/
     justify-content: center;
     align-items: self-end;
 }
