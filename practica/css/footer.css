@@ -2,6 +2,13 @@
 .footer {
     background-color: var(--main-bg-color);
     text-align: center;           /* alinear textos horizontalmente */
-    position: flex;
-    allign-items: flex-end;
+
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.footer
+.footer__media {
+    justify-content: center;
+    align-items: flex-end;
 }
