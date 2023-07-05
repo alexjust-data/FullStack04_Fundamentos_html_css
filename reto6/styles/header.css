@@ -20,39 +20,48 @@
      padding: 25px;
     
 }
-
-
+/*** 
+* tamaño caja */
 .header 
 .header__image{
-    width: 150px;  /* tamaño caja */
+    width: 150px;  
 }
 
-
+/*** 
+* img con medida relativa a la caja */
 .header 
 .header__image 
 img {
-    width: 100%;  /* para que me agrande y empequeñezca al unísono */
+    width: 100%;
 }
-
 
 .header 
 .header__nav 
 .header__nav__list {
     list-style: none; /* le estamos quitanto los puntos a la lista,
-                        es decir, le quitamos el estilo a la lista*/
-}
-.header 
-.header__nav 
-.header__nav__list 
-.header__nav__list__item 
-a { /* si pusieras "> a" sólo se ven afectados justo despues de __item */
-    text-decoration: none; /* le quitamos el bajo linea */
+                         es decir, le quitamos el estilo a la lista*/
+    display: flex;    /* organica en una sola línea horizontal (por defecto) */
+    align-items: center;
+    gap: 8px;
 }
 
 /****
 * He tenido que poner esto porque "Sign" e "in" se 
-* separan en dos líneas, además he añadido al html
-* <span class="single-line">Sign in</span></a> */
-.single-line {
-    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+* separan en dos líneas*/
+.header 
+.header__nav 
+.header__nav__list 
+.header__nav__list__item {
+    white-space: nowrap; /* Evitar salto de línea */
 }
+
+.header 
+.header__nav 
+.header__nav__list 
+.header__nav__list__item >
+a { /* si pusieras "> a" sólo se ven afectados justo despues de __item */
+    text-decoration: none; /* le quitamos el bajo linea */
+    padding: 5px 10px;     /* espaciado entre el texto y los bordes del enlace */
+    color: var(--main-text-color);        /* Cambiar el color del texto para asegurarse de que sea legible */ 
+}
+

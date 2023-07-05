@@ -9,8 +9,7 @@
 }
 
 
-/* clase inventada ".main-bg" se utiliza en <body>*/
-
+/*  <body> */
 .main-bg {
     background-color: var(--main-text-color); 
     color: white; 
