@@ -1,12 +1,19 @@
 
 .header {
+    background-size: cover;
     background-color: var(--main-bg-color);
     position: sticky;
     z-index: 999;
 
     display: flex;
     justify-content:space-between;
+    align-self: center;
 }
+
+body {
+    width: 80%;
+  }
+  
 
 .header 
 .header__image {
@@ -39,4 +46,12 @@ img {
 .header__nav__list__item 
 a { 
     text-decoration: none; 
+}
+
+.header /* quitamos lineas de la lista*/
+.header__nav 
+.header__nav__list 
+.header__nav__list__item 
+img { 
+    width: 50%;
 }
