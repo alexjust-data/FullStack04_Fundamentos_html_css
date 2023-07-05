@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in | codeflix</title>
+    <link rel="stylesheet" href="reto7/styles/normalize.css">
+    <link rel="stylesheet" href="reto7/styles/commons.css">
+    <link rel="stylesheet" href="reto7/styles/components.css">
+</head>
+<body class="main-bg">
+    <div>
+        <h1>Sign in</h1>
+        <!--nuestro formulario envía la informacion a registro.html por method="get"-->
+        <!--con method="post" la informacion no se verá la dirección http-->
+        <!--http://127.0.0.1:5500/registro.html?mail=alexjusdata@gmail.com&pwd=1234-->
+        <form method="post" action="registro.html"> 
+            <!-- EMAIL -->
+            <div>
+                <label for="email">Email</label>
+                <input  id="email" 
+                        type="email" 
+                        name="mail"
+                        value="alexjusdata@gmail.com" 
+                        placeholder="Add your email"
+                        required>
+            </div>
+            <!-- PASSPORT -->
+            <div>
+                <label for="password">Password</label>
+                <input type="password" id="pwd" name="pwd">
+            </div>
+            <!-- TELEFONO -->
+            <div>
+                <label for="phone">Phone</label>
+                <input type="tel" name="phone" id="phone">
+            </div>
+            <!--ESCOJE UN ARCHIVO LOCAL-->
+            <div>
+                <label for="avatar">Choose avatar</label>
+                <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg"> 
+            </div>
+            <!--AGRUPA VARIOS IMPUTS REFERIDOS AL div-->
+            <fieldset>
+                <h4>Fav category</h4>
+                <div>
+                    <label for="shows">shows</label>
+                    <input type="radio" id="shows" name="category" cheked value="shows"> 
+                    <!--mismo name para que la bola vaya de uno a otro-->
+                    <label for="docus">Docus</label>
+                    <input type="radio" id="docus" name="category" value="docus">
+                </div>
+            </fieldset>
+            <!--REPITO CON VARIACIÓN
+            <fieldset>
+                <legend>Select categories</legend>
+                <div>
+                    <label for="cshows">shows</label>
+                    <input type="checkbox" id="cshows" name="ccategory" cheked value="shows"> -->
+                    <!--mismo name para que la bola vaya de uno a otro
+                    <label for="cdocus">Docus</label>
+                    <input type="checkbox" id="cdocus" name="ccategory" value="docus">
+                </div>
+            </fieldset>
+            -->
+            <!--AÑADIR BIOGRAFÍA-->
+            <div>
+                <label for="bio">Bio</label>
+                <textarea name="bio" id="bio" placeholder="Add your bio" cols="40">d</textarea>
+            </div>
+            <div>
+                <label for="remomber">Rmemeber me</label>
+                <input type="checkbox" name="remember" id="remember">
+            </div>
+            <!--LISTADO PAISES-->
+            <div>
+                <label for="country">country</label>
+                <select name="country" id="country">
+                    <option value="es">Spain</option>
+                    <option value="us">EEUU</option>
+                </select>
+            </div>
+            <!-- RESETEA LO INTRODUCIDO -->
+            <div>
+                <button type="reset">Reset</button>
+                <input type="submit" value="Sign in">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
