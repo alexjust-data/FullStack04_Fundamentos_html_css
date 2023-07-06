@@ -8,75 +8,90 @@
     <link rel="stylesheet" href="reto7/styles/normalize.css">
     <link rel="stylesheet" href="reto7/styles/commons.css">
     <link rel="stylesheet" href="reto7/styles/components.css">
+    <link rel="stylesheet" href="reto8/styles/components.css">
+    <link rel="stylesheet" href="reto8/styles/sign-in.css">
 </head>
-<body class="main-bg">
-    <div>
+<body class="main-bg container"> <!--añado clase container para no repetirme/conflicto-->
+    <div class="card">
         <h1>Sign in</h1>
         <!--nuestro formulario envía la informacion a registro.html por method="get"-->
         <!--con method="post" la informacion no se verá la dirección http-->
         <!--http://127.0.0.1:5500/registro.html?mail=alexjusdata@gmail.com&pwd=1234-->
-        <form method="post" action="registro.html"> 
+        <form class="from" method="post" action="registro.html"> 
             <!-- EMAIL -->
-            <div>
-                <label for="email">Email</label>
-                <input  id="email" 
+            <div class="from__element">
+                <label class="from__label" for="email">Email</label>
+                <input  class="from__imput"
+                        id="email" 
                         type="email" 
                         name="mail"
                         value="alexjusdata@gmail.com" 
                         placeholder="Add your email"
                         required>
             </div>
+            <div class="from__element">
+                <label class="from__label" for="age">Age</label>
+                <input class="from__imput" type="number" id="age" required min="18" max="85">
+            </div>
             <!-- PASSPORT -->
-            <div>
-                <label for="password">Password</label>
-                <input type="password" id="pwd" name="pwd">
+            <div class="from__element">
+                <label class="from__label" for="password">Password</label>
+                <input class="from__imput" type="password" required id="pwd" name="pwd">
             </div>
             <!-- TELEFONO -->
-            <div>
-                <label for="phone">Phone</label>
-                <input type="tel" name="phone" id="phone">
+            <div class="from__element">
+                <label class="from__label" for="phone">Phone</label>
+                <input class="from__imput"
+                       type="tel" 
+                       name="phone" 
+                       id="phone"
+                       title="Format telf 600-000-0000"
+                       placeholder="Format telf 600-000-0000"
+                       pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                       required> <!-- obligas que escriba el patrón -->
             </div>
             <!--ESCOJE UN ARCHIVO LOCAL-->
-            <div>
-                <label for="avatar">Choose avatar</label>
-                <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg"> 
+            <div class="from__element">
+                <label class="from__label" for="avatar">Choose avatar</label>
+                <input class="from__imput" type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" required> 
             </div>
             <!--AGRUPA VARIOS IMPUTS REFERIDOS AL div-->
-            <fieldset>
-                <h4>Fav category</h4>
+            <fieldset class="from__element">
+                <legend>Select categories</legend>
                 <div>
-                    <label for="shows">shows</label>
-                    <input type="radio" id="shows" name="category" cheked value="shows"> 
+                    <label class="from__label" for="cshows">shows</label>
+                    <input class="from__imput" type="radio" id="cshows" name="ccategory" cheked value="shows">
                     <!--mismo name para que la bola vaya de uno a otro-->
-                    <label for="docus">Docus</label>
-                    <input type="radio" id="docus" name="category" value="docus">
+                    <label class="from__label" for="cdocus">Docus</label>
+                    <input class="from__imput" type="radio" id="cdocus" name="ccategory" value="docus">
                 </div>
             </fieldset>
             <!--REPITO CON VARIACIÓN
-            <fieldset>
-                <legend>Select categories</legend>
+            <fieldset class="from__element">
+                <h4>Fav category</h4>
                 <div>
-                    <label for="cshows">shows</label>
-                    <input type="checkbox" id="cshows" name="ccategory" cheked value="shows"> -->
-                    <!--mismo name para que la bola vaya de uno a otro
-                    <label for="cdocus">Docus</label>
-                    <input type="checkbox" id="cdocus" name="ccategory" value="docus">
+                    <label class="from__label" for="shows">shows</label>
+                    <input class="from__imput" type="checkbox" id="shows" name="category" cheked value="shows"> 
+                    <label class="from__label" for="docus">Docus</label>
+                    <input class="from__imput" type="checkbox" id="docus" name="category" value="docus">
                 </div>
             </fieldset>
             -->
-            <!--AÑADIR BIOGRAFÍA-->
-            <div>
-                <label for="bio">Bio</label>
-                <textarea name="bio" id="bio" placeholder="Add your bio" cols="40">d</textarea>
+            <!-- BIOGRAFÍA -->
+            <div class="from__element">
+                <label class="from__label" for="bio">Bio</label>
+                <textarea class="from__imput" name="bio" required id="bio" placeholder="Add your bio" required minlength="240"></textarea>
             </div>
-            <div>
-                <label for="remomber">Rmemeber me</label>
+            <!-- REMEMBER ME -->
+            <div class="from__element from__element--checkbox">
+                <label class="from__label" for="remember">Remember me</label>
                 <input type="checkbox" name="remember" id="remember">
             </div>
-            <!--LISTADO PAISES-->
-            <div>
-                <label for="country">country</label>
-                <select name="country" id="country">
+            <!-- PAISES -->
+            <div class="from__element">
+                <label class="from__label" for="country">country</label>
+                <select class="from__imput" name="country" id="country" required>
+                    <option value="es"></option>
                     <option value="es">Spain</option>
                     <option value="us">EEUU</option>
                 </select>
@@ -84,8 +99,14 @@
             <!-- RESETEA LO INTRODUCIDO -->
             <div>
                 <button type="reset">Reset</button>
-                <input type="submit" value="Sign in">
+                <input class="btn btn--secondary" type="submit" value="Sign in">
             </div>
+        <!---
+            <details open>
+                <summary>Expande el sumario</summary>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eius, deserunt impedit reprehenderit ad quisquam tempore odit enim possimus saepe molestiae, illo expedita explicabo atque illum hic! Optio, aliquid vel.</p>
+            </details>
+            -->
         </form>
     </div>
 </body>
