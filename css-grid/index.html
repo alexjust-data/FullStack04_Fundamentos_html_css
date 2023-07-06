@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body { 
+            display: grid;
+            grid-template-columns: 20% 60% 20; /*100%;*/ 
+            grid-template-rows: 80px 35vh 40vh 80px;
+            gap: 15px;
+            grid-template-areas: 
+            "navbar navbar navbar"
+            "header header header"
+            "aside main main"
+            "footer footer footer";
+        /* por orden coloco areas donde quiero 
+           del gridcada una de las secciones.
+           si quiero vacío coloc un punto */
+        }
+
+
+        /*@media (780 <= width){
+            body {
+                grid-template-columns: 20% 60% 20%;
+            }
+        }
+        */
+
+
+        nav { 
+            background-color: orange;
+            grid-area: navbar;
+         }
+        section { 
+            background-color: blue;
+            grid-area: header;
+         }
+        aside { 
+            background-color: blueviolet;
+            grid-area: aside;
+         }
+        main { 
+            background-color: yellow;
+            grid-area: main;
+         } 
+        footer {
+            background-color: green;
+            grid-area: footer;
+         }
+    </style>
+
+</head>
+<body>
+    <nav>nav</nav>
+    <section>section</section>
+    <aside>aside</aside>
+    <main>main</main>
+    <footer>footer</footer>
+</body>
+</html>
