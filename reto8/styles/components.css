@@ -1,0 +1,87 @@
+/***
+* Bloques o tags que se van a repetir en varias páginas
+*/
+
+.btn {
+    color: var(--main-text-color);
+    background-color: var(--main-brand-color);
+    padding: 10px; /* le damos aire a los 4 margenes */
+    border-radius: 3px; /* redondeamos los cantos */
+    border: 1px solid var(--main-brand-color); /* le añadimos borde*/
+}
+
+
+/*************************
+*************************
+* MODIFICAMOS sign-in.html
+*/
+.from__element {
+    display: flex; /* nos lo pone horizontal */
+    flex-direction: column; /* lo ponemos en columna */
+    margin-bottom: 14px; /*le damos márgenes */
+}
+/* separamos entre elmentos, no hacemos el label más grande */
+.from__label {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.from__imput {
+    padding: 13px 25px; /* ensancho cajas input [ancho-margen izq inicio letras] */
+    border-radius: 5px; /* redondeo esquinas*/
+    background: #333;
+    border: none; /*quitamos bordes*/
+    color: var(--main-text-color)
+}
+/*cambiamos colores del texto en :: input y textarea*/
+input::placeholder, textarea::placeholder {
+    color: rgb(147, 147, 121);
+}
+
+/* añado una nueva clase de button btn--secondary*/
+.btn .btn--secondary {
+    background-color: transparent;
+    border-color: var(--main-text-color);
+}
+
+/* el checkbox lo centro*/
+.from__element 
+.from__element--checkbox {
+    flex-direction: row;
+    align-items: center;
+}
+.from__element--checkbox input[type="checkbox"] {
+    margin-right: 50px;
+}
+/*
+* MODIFICAMOS sign-in.html
+**************************
+***************************/
+
+/***
+* Con esta clase ocultaremos un boton Show all.
+* hidden va suelto sin nada más en
+* <a class="btn" href="#shows" hidden >
+*/
+.header__nav__list__item .hidden-xs {
+    display: none; /* desaparece */
+    /*visibility: hidden; /* invisibiliza */
+}
+
+
+@media print {     /* se ejecuta en el print*/
+    * {
+        color: red; /* imprimirá *todas* las letras rojas*/
+    }
+}
+
+/* la clase se vería reflejada cuando tenga la lógica */
+@media screen and (min-width: 760px) and (max-width: 1199px){ /* min-width -> todo lo que está por encima de... */
+    .header__nav__list__item .hidden-xs{
+        display: block;  /*cuando "screen and (min-width: 760px)" 
+                                      la clase pasará de ser none a block*/
+    }
+}
+
+
+

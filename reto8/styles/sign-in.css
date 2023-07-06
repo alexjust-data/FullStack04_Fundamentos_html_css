@@ -1,0 +1,25 @@
+
+/***
+* IMAGEN DE FONDO
+*/
+.container {
+    background-image: url(../../assets/app/catalog.jpg);
+}
+
+
+/***
+* ENMARCO TODO EL CUADRO
+*/
+.card {
+    padding: 40px 20px 50px 20px; /*reenmarco 4 lados*/
+    max-width: 320px; /*para que el ancho no se vaya*/
+    margin: 0 auto;   /*lo centro - siempre alineado*/
+    /****
+    * Para conseguir color de fondo de todo el card
+    * + si queremos darle transparencia a la base
+    */
+    background-color: rgba(0, 0, 0, 0.9);
+    color: var(--main-text-color);
+    /* opacity: 90%; */
+
+}
