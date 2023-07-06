@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive images example</title>
+    <style>
+        img.docu {
+            width: 100%;
+            background-color: aqua;
+            aspect-ratio: 16/; /*que proporcion debe tener*/
+            /* object-fit: contain; */
+            /* object-fit: cover; */
+            /* object-position: top center;  */
+        }
+    </style>
+
+</head>
+<body>
+    <img class="docu" src="../assets/docus/docu_1.webp" alt="">
+    <!-- Pictue/source -->
+    <picture>
+        <!-- a partir de 1200 debería utilizr esta foto -->
+        <!-- siempre arriba la de mayor valor -->
+        <source srcset="https://storage.googleapis.com/web-dev-uploads/image/KT4TDYaWOHYfN59zz6Rc0X4k4MH3/ZJ6ytgzvsh5CvWhdthsA.jpg" media="(min-width:1200px)">
+        <!-- a partir de 1200 debería utilizr esta foto -->
+        <source srcset="https://storage.googleapis.com/web-dev-uploads/image/KT4TDYaWOHYfN59zz6Rc0X4k4MH3/qQ0QuF4k0kO8B72b8Vo8.jpg" media="(min-width:768px)">
+        <!-- img por defecto si fallan las demás -->
+        <img srcset="https://storage.googleapis.com/web-dev-uploads/image/KT4TDYaWOHYfN59zz6Rc0X4k4MH3/fO7EJEn4hGVeN4UbBO3g.jpg">
+    </picture>
+    <!-- srcset --><!-- con 1x le decimos que se cargue est imagen cuando tenga esta resolucion -->
+    <img src="dog_c_scalew_1352.jpeg" 
+         alt="serpiente" 
+         srcset="
+         dog_c_scalew_591 591,
+         dog_c_scalew_1352 1352"> <!--mirar video 22:30 en adelante del perro-->
+</body>
+</html>
