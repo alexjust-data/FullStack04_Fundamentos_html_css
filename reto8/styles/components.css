@@ -50,6 +50,7 @@ input::placeholder, textarea::placeholder {
     flex-direction: row;
     align-items: center;
 }
+/*todos los .from__element--checkbox que tengan input tipo "checkbox"*/
 .from__element--checkbox input[type="checkbox"] {
     margin-right: 50px;
 }
