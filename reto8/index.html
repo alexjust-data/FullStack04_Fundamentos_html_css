@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Codeflix</title>
+     <!-- añado esta linea"-->
+    <meta property="og:title" content="CodeFlixx">
+     <!-- añado esta linea -->
+    <meta property="og:description" content="Codeflix website description">
+    <meta property="og:image" content="assets/app/catalog.jpg">
     <link rel="stylesheet" href="styles/normalize.css"> <!--normalmente los styles normalizados al principio-->
     <link rel="stylesheet" href="styles/commons.css">
     <link rel="stylesheet" href="styles/footer.css">
@@ -13,6 +18,7 @@
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/components.css">
     <link rel="stylesheet" href="styles/info.css">
+    <link rel="stylesheet" href="styles/shows.css">
 </head>
 
 <body class="main-bg"> <!-- clase .main-bg del "commons.css"-->
@@ -65,7 +71,7 @@
             <!--series-->
             <section>
                 <h2>Newest</h2>
-                <ul>
+                <ul class="shows__list">
                     <li>
                         <figure>
                             <img src="../assets/series/serie_1.jpg" alt="spy master">
@@ -93,7 +99,35 @@
                 </ul>
             </section>
             <!--docus-->
-            <section></section>
+            <section>
+                <h2>Docus</h2>
+                <ul class="shows__list">
+                    <li>
+                        <figure>
+                            <img src="../assets/docus/docu_1.webp" alt="spy master">
+                            <figcaption>spy master</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="../assets/docus/docu_2.webp" alt="House od dragon">
+                            <figcaption>House od dragon</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="../assets/docus/docu_3.webp" alt="Loe & death">
+                            <figcaption>Loe & death</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="../assets/docus/docu_4.webp" alt="succession">
+                            <figcaption>succession</figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </section>
         </section>
     </main>
     <footer class="footer" id="footer">
