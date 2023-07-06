@@ -31,27 +31,35 @@
 
 
 /****** HERRAMIENTAS SIZE - 
-******* [https://semantic-ui.com/elements/container.html]  
-******* - depende del diseño entre tablet o telef, etc
+* [https://semantic-ui.com/elements/container.html]  
+* - depende del diseño entre tablet o telef, etc
 * - @media
 ****/ 
 
 
 /* PUEDES MIRAR SI LAS HERRAMIENTAS FUNCIONAN EN OPERADORES
-https://caniuse.com/
+* 
+* https://caniuse.com/
 */
 
 
 /***** HTML attribute reference
-***** listado de atributos html
-* - https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes
-
+* listado de atributos html
+* https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes
+****/
 
 /***** GET datos de usuario INPUTS
-******
+*
 * - https://getbootstrap.com/docs/5.0/forms/select/
+***/
 
 
 /****** EXPANDE react-accordion/
 * 
 * https://mui.com/material-ui/react-accordion/
+****/
+
+/***** TRUCOS PARA GRIDS
+*
+* https://css-tricks.com/snippets/css/complete-guide-grid/
+****/

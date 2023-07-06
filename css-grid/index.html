@@ -9,11 +9,15 @@
     <style>
         body { 
             display: grid;
-            grid-template-columns: 20% 60% 20; /*100%;*/ 
+                                /* 3 columnas*/  
+            grid-template-columns: 20% 60% 20%; 
+         /* grid-template-columns: 1fr 1fr 1fr 1fr; */  
+         /* grid-template-columns: reptite(3 25%); */ 
+         /* grid-template-columns: reptite(3 1fr); */ 
             grid-template-rows: 80px 35vh 40vh 80px;
             gap: 15px;
             grid-template-areas: 
-            "navbar navbar navbar"
+            "navbar navbar navbar" /* 3 columnas*/
             "header header header"
             "aside main main"
             "footer footer footer";
@@ -23,7 +27,9 @@
         }
 
 
-        /*@media (780 <= width){
+        /* pondría grid-template-columns: 100%; 
+        /* 
+        @media (780 <= width){
             body {
                 grid-template-columns: 20% 60% 20%;
             }
