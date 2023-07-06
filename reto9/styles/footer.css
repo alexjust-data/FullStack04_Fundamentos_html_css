@@ -11,6 +11,12 @@
     /*margin: 80px 0 0 0 ;        /* margin==padding */
     /* ojo con margin: si pones dos bloques seguidos, los margins se superponen */
     /*margin-bottom: 5px;          /* kevin utiliza siempre un margin botton */
+
+
+    /* gradiente */
+    /* https://cssgradient.io/ */
+    /* https://www.cssmatic.com/ */
+    background: radial-gradient(circle, rgba(229,9,20,1) 0%, #0e1b4f 70%, #000413 100%);
 }
 
 /* clase ".footer__company" un grado más de especificidad en footer*/
@@ -28,4 +34,11 @@
     font-weight: 700;              /* para darle peaso a la palabra de la caja */
     text-transform: capitalize;    /* Mayúsculas, etc */
     line-height: 1;              /* Interlineado */
+}
+
+
+@media (48em <= width) {
+    .footer {
+        background: radial-gradient( 51.39% 511.66% at 47.68% -217.91%, #ff9900 0%, #e50914 17.27%, #0e1b4f 79.44%, #000413 100% );
+    }
 }

@@ -109,6 +109,7 @@ input::placeholder, textarea::placeholder {
     border-radius: 50%;
     animation: spin 2s linear;
     animation-iteration-count: infinite;
+    animation-play-state: paused;
 }
 
 
