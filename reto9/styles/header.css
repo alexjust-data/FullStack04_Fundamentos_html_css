@@ -1,0 +1,78 @@
+/***
+* En la web original el header se queda fijo
+* y todo lo demás acompaña al scrol
+*/
+.header {
+    position: sticky; /* juega con todas las posiciones y escoje una. 
+    En este caso es para que no nos ponga en contenido de capa 1 banner 
+    por debajo de la capa 2 header*/
+    background-color: var(--main-bg-color);
+    z-index: 999; /* mira la capa "banner.css", ponle uno arriba (o valor alto)*/
+    top: 0; /* para que quede ajustado arriba */
+    /*bottom: 0; /* para que quede ajustadp abajo */
+
+    /*** COLOCO EL display: flex; EN LA CAJA PADRE
+     *** esta se encarga de mover las cajas de dentro */
+     display: flex;
+     justify-content:space-between;
+     align-self: center;
+    /*** le doy un poco de aire, margen al bottom*/
+     padding: 25px;
+    
+}
+
+/*** 
+* tamaño caja */
+.header 
+.header__image{
+    width: 150px;  
+}
+
+/*** 
+* img con medida relativa a la caja */
+.header 
+.header__image 
+img {
+    width: 100%;
+}
+
+.header 
+.header__nav 
+.header__nav__list {
+    list-style: none; /* le estamos quitanto los puntos a la lista,
+                         es decir, le quitamos el estilo a la lista*/
+    display: flex;    /* organica en una sola línea horizontal (por defecto) */
+    align-items: center;
+    gap: 8px;
+}
+
+/****
+* He tenido que poner esto porque "Sign" e "in" se 
+* separan en dos líneas*/
+.header 
+.header__nav 
+.header__nav__list 
+.header__nav__list__item {
+    white-space: nowrap; /* Evitar salto de línea */
+}
+
+.header 
+.header__nav 
+.header__nav__list 
+.header__nav__list__item >
+a { /* si pusieras "> a" sólo se ven afectados justo despues de __item */
+    text-decoration: none; /* le quitamos el bajo linea */
+    padding: 5px 10px;     /* espaciado entre el texto y los bordes del enlace */
+    color: var(--main-text-color);        /* Cambiar el color del texto para asegurarse de que sea legible */ 
+}
+
+
+/*****
+* CAMBIO DE TAMAÑO [al cambia el tamaño de la pantalla]
+* - lógica de actuación  (768px <= width)
+* - también aplicaría en vez de -width- a -height-
+*/
+@media (768px <= width){
+    .header 
+    .header__image { width: 250px; }    /* de tamaño original a 250px */
+}
