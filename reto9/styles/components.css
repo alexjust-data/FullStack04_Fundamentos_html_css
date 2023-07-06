@@ -5,11 +5,20 @@
 .btn {
     color: var(--main-text-color);
     background-color: var(--main-brand-color);
-    padding: 10px; /* le damos aire a los 4 margenes */
-    border-radius: 3px; /* redondeamos los cantos */
-    border: 1px solid var(--main-brand-color); /* le añadimos borde*/
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid var(--main-brand-color);
+    /*https://www.matthewlein.com/*/
+    transition: background-color 2s linear; /*liear es el tiempo*/
+    /*transition-delay: 3s;*/
 }
 
+@media (hover:hover) {
+    /* ESTADO INICIAL */
+    .btn:hover { 
+        background-color: blue;
+    }
+}
 
 /*************************
 *************************
@@ -82,6 +91,24 @@ input::placeholder, textarea::placeholder {
         display: block;  /*cuando "screen and (min-width: 760px)" 
                                       la clase pasará de ser none a block*/
     }
+}
+
+
+/*** ANIMATION SPIN ***/
+@keyframes spin {
+    0% { transform: rotate(0deg); } /* rotateX */
+    100% { transform: rotate(360deg); } /* rotateX */
+}
+
+.spinner {
+    height: 50px;
+    width: 50px;
+    /*background-color: blue;*/
+    border: 2px solid rgb(191, 191, 215);
+    border-left-color: red;
+    border-radius: 50%;
+    animation: spin 2s linear;
+    animation-iteration-count: infinite;
 }
 
 
