@@ -32,13 +32,12 @@
 
 /****** HERRAMIENTAS SIZE - 
 * [https://semantic-ui.com/elements/container.html]  
-* - depende del diseño entre tablet o telef, etc
-* - @media
+* depende del diseño entre tablet o telef, etc
+* @media
 ****/ 
 
 
 /* PUEDES MIRAR SI LAS HERRAMIENTAS FUNCIONAN EN OPERADORES
-* 
 * https://caniuse.com/
 */
 
@@ -49,18 +48,15 @@
 ****/
 
 /***** GET datos de usuario INPUTS
-*
-* - https://getbootstrap.com/docs/5.0/forms/select/
+* https://getbootstrap.com/docs/5.0/forms/select/
 ***/
 
 
 /****** EXPANDE react-accordion/
-* 
 * https://mui.com/material-ui/react-accordion/
 ****/
 
 /***** TRUCOS PARA GRIDS
-*
 * https://css-tricks.com/snippets/css/complete-guide-grid/
 ****/
 
@@ -74,15 +70,30 @@
 
 /****
 * EXTENSIONES PARA PRBAR COMO QUEDA LA WEB
-* 
-*  https://chrome.google.com/webstore/detail/open-graph-checker/lkjaebkedoblfeglnhbgbjbdodjdogpe
+* https://chrome.google.com/webstore/detail/open-graph-checker/lkjaebkedoblfeglnhbgbjbdodjdogpe
 */
 
 
-
-
 /****
-* HERRAMIENTAS PARA REESCALAR Y CONFIGURAR LAS IMAGENES
-* 
+* REESCALAR Y CONFIGURAR LAS IMAGENES
 * https://www.responsivebreakpoints.com/
 ** /
+
+/****
+** FUENTES 
+** https://fonts.google.com/
+** https://typescale.com/
+**/
+
+
+/*****
+** ICONOS
+** https://fonts.google.com/icons
+** https://codingheroes.io/resources/
+**/ 
+
+
+/*****
+** BORDER COLORS
+** https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+**/
