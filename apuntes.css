@@ -31,55 +31,56 @@
 
 
 /****** HERRAMIENTAS SIZE - 
-* [https://semantic-ui.com/elements/container.html]  
-* depende del diseño entre tablet o telef, etc
-* @media
-****/ 
+** [https://semantic-ui.com/elements/container.html]  
+** depende del diseño entre tablet o telef, etc
+** @media
+**/ 
 
 
-/* PUEDES MIRAR SI LAS HERRAMIENTAS FUNCIONAN EN OPERADORES
-* https://caniuse.com/
-*/
+/***** PUEDES MIRAR SI LAS HERRAMIENTAS FUNCIONAN EN OPERADORES
+** https://caniuse.com/
+**/
 
 
 /***** HTML attribute reference
-* listado de atributos html
-* https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes
-****/
+** listado de atributos html
+** https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes
+**/
 
 /***** GET datos de usuario INPUTS
-* https://getbootstrap.com/docs/5.0/forms/select/
+** https://getbootstrap.com/docs/5.0/forms/select/
 ***/
 
 
 /****** EXPANDE react-accordion/
-* https://mui.com/material-ui/react-accordion/
-****/
+** https://mui.com/material-ui/react-accordion/
+**/
 
 /***** TRUCOS PARA GRIDS
-* https://css-tricks.com/snippets/css/complete-guide-grid/
-****/
+** https://css-tricks.com/snippets/css/complete-guide-grid/
+**/
 
 
-/**** OPEN GRAPH PROTOCAL
-* permite que cualquier página web se convierta 
-* en un objeto rico en un gráfico socia
-* https://ogp.me/
-*/
+/***** 
+** OPEN GRAPH PROTOCAL
+** permite que cualquier página web se convierta 
+** en un objeto rico en un gráfico socia
+** https://ogp.me/
+**/
 
 
-/****
-* EXTENSIONES PARA PRBAR COMO QUEDA LA WEB
-* https://chrome.google.com/webstore/detail/open-graph-checker/lkjaebkedoblfeglnhbgbjbdodjdogpe
-*/
+/*****
+** EXTENSIONES PARA PRBAR COMO QUEDA LA WEB
+** https://chrome.google.com/webstore/detail/open-graph-checker/lkjaebkedoblfeglnhbgbjbdodjdogpe
+**/
 
 
-/****
+/*****
 * REESCALAR Y CONFIGURAR LAS IMAGENES
 * https://www.responsivebreakpoints.com/
 ** /
 
-/****
+/*****
 ** FUENTES 
 ** https://fonts.google.com/
 ** https://typescale.com/
@@ -96,4 +97,11 @@
 /*****
 ** BORDER COLORS
 ** https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+**/
+
+
+/****
+** CSS TOOLS
+** https://www.cssmatic.com/
+** https://codingheroes.io/resources/
 **/
