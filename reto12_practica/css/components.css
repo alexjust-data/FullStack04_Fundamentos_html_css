@@ -1,0 +1,54 @@
+
+   .button {
+      position: relative;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 60px; /* Tamaño reducido */
+      height: 60px; /* Tamaño reducido */
+      margin: -1px;
+      border-radius: 50%;
+      text-decoration: none;
+      background-color: var(--main-brand-color);
+      color: var(--main-text-color);
+      transition: background-color 0.3s ease;
+      overflow: hidden;
+    }
+
+    /* botones anillas */
+    .button::before,
+    .button::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background-color: transparent;
+      z-index: 1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 0 6px #ff51cc;
+    }
+    .button::before { /* botones anillas */
+      width: 30px; /* Tamaño reducido */
+      height: 30px; /* Tamaño reducido */
+      z-index: 0;
+    }
+    .button::after { /* botones anillas */
+      width: 50px; /* Tamaño reducido */
+      height: 50px; /* Tamaño reducido */
+      z-index: 1;
+    }
+
+    /* boton central */
+    .button--large {
+      width: 80px; /* Tamaño reducido */
+      height: 80px; /* Tamaño reducido */
+    }
+    .button--large::before { /* boton central */
+      width: 50px; /* Tamaño reducido */
+      height: 50px; /* Tamaño reducido */
+    }
+    .button--large::after { /* boton central */
+      width: 70px; /* Tamaño reducido */
+      height: 70px; /* Tamaño reducido */
+    }
