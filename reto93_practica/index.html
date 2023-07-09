@@ -4,52 +4,165 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/commons.css">
     <link rel="stylesheet" href="css/info.css">
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/skill.css">
 
     <title>Document</title>
 </head>
 <body class="main-bg">
     <header class="header">
-        <div class="header__image">
-            <img src="media/fotor_ai.jpeg" alt="avatar">
+        <div class="header__image" id="image">
+            <img src="media/fotor_ai_775.jpg" alt="avatar">
         </div>
-        <nav class="header__nav">
+        <div class="header__text" id="text">
+            <h3> Ven Otawa </h3>
+            <p>Soy <strong>Ven Otawa</strong>, una luciérnaga ciberpunk. Experta en arquitectura de código Pi. Me crearon como virus inmutable para buscar y enfrentar desafíos; con dulzura me desplazaré entre tus bloques de código y mejoraré tus funciones. Dame acceso.</p>
+        </div>
+        <nav class="header__nav" id="nav">
             <ul class="header__nav__list">
-                <li class="header__nav__list__item">
-                    <!--<img src="media/carpeta.png" alt="carpeta">-->
-                    <a class="button" href="#section2">Skills</a>
-                </li>
-                <li class="header__nav__list__item">
-                    <a class="button button--large" href="#section1">About</a>
-                </li>
-                <li class="header__nav__list__item">
-                    <a class="button" href="#section3">Contact</a>
-                </li>
-            </ul> 
+              <li class="header__nav__list__item">
+                <!--<img src="media/carpeta.png" alt="carpeta">-->
+                <a class="button" href="#section2">Skills</a>
+              </li>
+              <li class="header__nav__list__item">
+                <a class="button button--large" href="#section1">About</a>
+              </li>
+              <li class="header__nav__list__item">
+                <a class="button" href="#section3">Contact</a>
+              </li>
+            <!--
+              <li class="header__nav__list__item" id="giff">
+              <img src="media/giff/k-e-delgado-flame-on.gif" alt="FlameGIF">
+              </li>
+            -->
+            </ul>
         </nav>
     </header>
-    <main>
-        <section class="info">
+    <div id="habilidades">
+        <h2>Mis Habilidades</h2>
 
-            <div class="info__text" id="section1" >
-                <img src="" alt="ciber_paisaje nipon">
-                <h3> About</h3>
-                <p>Soy <strong>Ven Otawa</strong>, una luciérnaga ciberpunk. Experta en arquitectura de código Pi. Me crearon como virus inmutable para buscar y enfrentar desafíos; con dulzura me desplazaré entre tus bloques de código y mejoraré tus funciones. Dame acceso.</p>
-            </div>
-            <div class="info__video">
-                <img src="" alt="ciber_paisaje nipon">
-            </div>
+        <h3>Seguridad informática: 10</h3>
+        <progress class="barra-progreso" value="5" max="10"></progress>
 
-        </section>
-    </main>
-    <footer class="footer" id="#section3">
-        <div class="footer__nipon">
-            <img src="media/paisaje.jpg" alt="ciber_paisaje nipon">
+        <h3>Hacking ético y pruebas de penetración: 10</h3>
+        <progress class="barra-progreso" value="5" max="10"></progress>
+
+        <h3>Habilidades de resolución de problemas: 9</h3>
+        <progress class="barra-progreso" value="9" max="10"></progress>
+
+        <!-- Continúa con el resto de tus habilidades... -->
+    </div>
+    <main class="banner">
+        <div class="banner__content">
+            <h1>Unlimited movies, TV shows, and more</h1>
+            <h2>Watch anywhere, Cancel anytime</h2>
+            <p>Ready to Watch?</p>
         </div>
+    </main>
+    <div class="card">
+        <h1>Sign in</h1>
+        <!--nuestro formulario envía la informacion a registro.html por method="get"-->
+        <!--con method="post" la informacion no se verá la dirección http-->
+        <!--http://127.0.0.1:5500/registro.html?mail=alexjusdata@gmail.com&pwd=1234-->
+        <form class="from" method="post" action="registro.html"> 
+            <!-- EMAIL -->
+            <div class="from__element">
+                <label class="from__label" for="email">Email</label>
+                <input  class="from__imput"
+                        id="email" 
+                        type="email" 
+                        name="mail"
+                        value="alexjusdata@gmail.com" 
+                        placeholder="Add your email"
+                        required>
+            </div>
+            <div class="from__element">
+                <label class="from__label" for="age">Age</label>
+                <input class="from__imput" type="number" id="age" required min="18" max="85">
+            </div>
+            <!-- PASSPORT -->
+            <div class="from__element">
+                <label class="from__label" for="password">Password</label>
+                <input class="from__imput" type="password" required id="pwd" name="pwd">
+            </div>
+            <!-- TELEFONO -->
+            <div class="from__element">
+                <label class="from__label" for="phone">Phone</label>
+                <input class="from__imput"
+                       type="tel" 
+                       name="phone" 
+                       id="phone"
+                       title="Format telf 600-000-0000"
+                       placeholder="Format telf 600-000-0000"
+                       pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                       required> <!-- obligas que escriba el patrón -->
+            </div>
+            <!--ESCOJE UN ARCHIVO LOCAL-->
+            <div class="from__element">
+                <label class="from__label" for="avatar">Choose avatar</label>
+                <input class="from__imput" type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" required> 
+            </div>
+            <!--AGRUPA VARIOS IMPUTS REFERIDOS AL div-->
+            <fieldset class="from__element">
+                <legend>Select categories</legend>
+                <div>
+                    <label class="from__label" for="cshows">shows</label>
+                    <input class="from__imput" type="radio" id="cshows" name="ccategory" cheked value="shows">
+                    <!--mismo name para que la bola vaya de uno a otro-->
+                    <label class="from__label" for="cdocus">Docus</label>
+                    <input class="from__imput" type="radio" id="cdocus" name="ccategory" value="docus">
+                </div>
+            </fieldset>
+            <!--REPITO CON VARIACIÓN
+            <fieldset class="from__element">
+                <h4>Fav category</h4>
+                <div>
+                    <label class="from__label" for="shows">shows</label>
+                    <input class="from__imput" type="checkbox" id="shows" name="category" cheked value="shows"> 
+                    <label class="from__label" for="docus">Docus</label>
+                    <input class="from__imput" type="checkbox" id="docus" name="category" value="docus">
+                </div>
+            </fieldset>
+            -->
+            <!-- BIOGRAFÍA -->
+            <div class="from__element">
+                <label class="from__label" for="bio">Bio</label>
+                <textarea class="from__imput" name="bio" required id="bio" placeholder="Add your bio" required minlength="240"></textarea>
+            </div>
+            <!-- REMEMBER ME -->
+            <div class="from__element from__element--checkbox">
+                <label class="from__label" for="remember">Remember me</label>
+                <input type="checkbox" name="remember" id="remember">
+            </div>
+            <!-- PAISES -->
+            <div class="from__element">
+                <label class="from__label" for="country">country</label>
+                <select class="from__imput" name="country" id="country" required>
+                    <option value="es"></option>
+                    <option value="es">Spain</option>
+                    <option value="us">EEUU</option>
+                </select>
+            </div>
+            <!-- RESETEA LO INTRODUCIDO -->
+            <div>
+                <button type="reset">Reset</button>
+                <input class="btn btn--secondary" type="submit" value="Sign in">
+            </div>
+            <!--
+            <details open>
+                <summary>Expande el sumario</summary>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eius, deserunt impedit reprehenderit ad quisquam tempore odit enim possimus saepe molestiae, illo expedita explicabo atque illum hic! Optio, aliquid vel.</p>
+            </details>
+            -->
+        </form>
+    </div>
+    <footer class="footer" id="#section3">
         <div class="footer__media">
             <img src="media/media_media.png" alt="media">
         </div>

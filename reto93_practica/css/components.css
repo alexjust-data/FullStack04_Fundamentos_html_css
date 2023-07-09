@@ -1,54 +1,37 @@
 
+
+.button {
+   height: 40px;             /* alto */
+   width: 70px;              /* ancho */
+
+   display: flex;            /* Usa el modelo de caja flexible */
+   align-items: center;      /* Centra verticalmente los elementos en el contenedor */
+   justify-content: center;  /* Centra horizontalmente los elementos en el contenedor */
+
+   background-color: var(--main-brand-color); /* Color de fondo */
+   border-radius: 5px;       /* Borde redondeado */
+   outline: 1px solid rgb(235, 124, 211); /* Doble borde */
+   outline-offset: -4px;     /* Superposición del doble borde */
+   
+   color: rgba(255, 255, 255, 0.85); /* color texto con opacidad */
+   margin: 10px;             /* margen alrededor de los botones */
+   margin-right: 50px;       /* margen solo en el lado derecho */
+   overflow: hidden;         /* Oculta el contenido que desborda */
+   position: relative;       /* Posición relativa */
+   transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
+}
+
+
+@media (max-width: 390px) {
    .button {
-      position: relative;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      width: 60px; /* Tamaño reducido */
-      height: 60px; /* Tamaño reducido */
-      margin: -1px;
-      border-radius: 50%;
-      text-decoration: none;
-      background-color: var(--main-brand-color);
-      color: var(--main-text-color);
-      transition: background-color 0.3s ease;
-      overflow: hidden;
-    }
+     height: 30px; /* Reducir altura */
+     width: 60px; /* Reducir ancho */
+     font-size: 12px; /* Reducir tamaño de fuente */
+     margin: 10px; /* Ajustar margen */
+     margin-right: 40px; /* Ajustar margen derecho */
+   }
+ }
+ 
 
-    /* botones anillas */
-    .button::before,
-    .button::after {
-      content: "";
-      position: absolute;
-      border-radius: 50%;
-      background-color: transparent;
-      z-index: 1;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      box-shadow: 0 0 0 6px #ff51cc;
-    }
-    .button::before { /* botones anillas */
-      width: 30px; /* Tamaño reducido */
-      height: 30px; /* Tamaño reducido */
-      z-index: 0;
-    }
-    .button::after { /* botones anillas */
-      width: 50px; /* Tamaño reducido */
-      height: 50px; /* Tamaño reducido */
-      z-index: 1;
-    }
-
-    /* boton central */
-    .button--large {
-      width: 80px; /* Tamaño reducido */
-      height: 80px; /* Tamaño reducido */
-    }
-    .button--large::before { /* boton central */
-      width: 50px; /* Tamaño reducido */
-      height: 50px; /* Tamaño reducido */
-    }
-    .button--large::after { /* boton central */
-      width: 70px; /* Tamaño reducido */
-      height: 70px; /* Tamaño reducido */
-    }
+   
+    

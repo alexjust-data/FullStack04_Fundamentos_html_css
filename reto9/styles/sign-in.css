@@ -19,5 +19,5 @@
     * Para conseguir color de fondo de todo el card
     * + si queremos darle transparencia a la base
     */
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.9); /* transparecia 0.9 */
 }

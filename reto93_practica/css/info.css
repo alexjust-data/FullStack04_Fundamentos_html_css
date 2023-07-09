@@ -8,9 +8,7 @@
     
 }
 
-.info 
-.info__text 
-img {
+.info__text img {
     justify-content: center;
     align-items: flex-start;
     top: 0;            /*ajusto body a la pantalla relativa*/
@@ -20,10 +18,7 @@ img {
 }
 
 
-
-.info 
-.info__video
-img {
+.info__video img {
     position: relative;
     display: flex;
     justify-content: center; 

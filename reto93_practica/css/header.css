@@ -1,53 +1,137 @@
 
 .header {
-    background-size: cover;
-    background-color: var(--main-bg-color);
-    position: sticky;
-    z-index: 999;
+    position: sticky; /* Elemento fijo en la posición especificada */
+    z-index: 999;                           /* Capa z para el elemento */
+    min-height: 200px;                      /* Altura mínima del elemento */
+    max-height: 100vh;                      /* Altura máxima del elemento */
+    background-size: cover;                 /* Ajusta el tamaño del fondo para cubrir el contenedor */
+    background-color: var(--main-bg-color); /* Color de fondo */
+    align-items: center;                    /* Centra verticalmente los elementos en el contenedor */
 
-    display: flex;
-    justify-content:space-between;
-    align-self: center;
+    display: grid;                          /* modelo rejilla */
+    grid-template-columns: auto auto 70px;  /* columnas rejilla */
+    grid-template-rows: minmax(100px, 200px);                /* filas rejilla */
+    grid-template-areas: "header__image header__text header__nav"; /* áreas rejilla */
+    gap: 10px;                              /* Espacio entre celdas rejilla */
 }
 
+#image {grid-area: header__image; }
+#text {grid-area: header__text; }
+#nav {grid-area: header__nav; }
 
-.header 
+/****
+*IMAGEN
+********/
 .header__image {
-    width: 50%;
+    width: 100%;      /* Este será el tamaño del contenedor de la imagen */
+    min-width: 0px;
+    height: 97%; /* Ajusta la altura del contenedor de la imagen en base a la altura del header y el padding */
+    padding-left: 2%;
+    overflow: hidden; /* Cualquier parte de la imagen que exceda el tamaño del contenedor se ocultará */
+    
+}
+.header__image img {
+    width: 100%; /* img ocupará el 100% del ancho de su contenedor */
+    height: 100%; /* img ocupará el 100% de la altura de su contenedor */
+    object-fit: cover; /* Esto ajustará la imagen para  */
+    border-radius: 5px;
 }
 
 
-.header /* img con escala relativa */
-.header__image 
-img {
-    width: 100%;  
+@media (max-width: 390px) {
+    .header {
+        grid-template-columns: auto auto;  /* Ahora solo hay dos columnas */
+        grid-template-areas: "header__image header__text";  /* Ahora solo hay dos áreas */
+    }
+
+    #nav {
+        display: none; /* Esto oculta el elemento con id 'nav' */
+    }
 }
 
+/****
+*TEXTO
+********/
+.header__text {
+    /*font-size: 2vw; /* Ajusta este valor como necesites */
+    word-wrap: break-word;               /* rompe la linea */
+    text-align: justify;                 /* Esto justificará el texto */
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--main-text-color);
+    padding-right: 3%;
+    max-height: 200px;                   /* Ajusta este valor según lo que necesites */
+    overflow-y: auto;                    /* Muestra un scrollbar cuando el contenido se desborda */
+}
+}
+/* Esto establece un tamaño de fuente mínimo de 16px cuando 
+la ventana es más pequeña que 600px */
+@media (max-width: 600px) {
+    .header__text {
+        font-size: 16px;
+    }
+}
+/* Esto establece un tamaño de fuente máximo de 36px cuando 
+la ventana es más grande que 1200px */
+@media (min-width: 1000px) {
+    .header__text {
+        font-size: 18px;
+    } 
+}
+@media (max-width: 550px) {
+    .header__text {
+        font-size: 14px;
+    } 
+}
 
-.header /* quitando puntos de la lista */
-.header__nav 
+/****
+* NAV
+********/
+.header__nav {
+    max-width: 150px; 
+    display: flex;              /* Flexbox para centrar el contenido horizontalmente */
+    justify-content: center;    /* Centra horizontalmente */
+    align-items: center;        /* Centra verticalmente */
+    padding-right: 8%;
+}
 .header__nav__list {
-    list-style: none; 
+    list-style: none;          /* Quita los puntos de la lista */
+    display: flex;             /* Flexbox para alinear los elementos horizontalmente */
+    justify-content: center;   /* Centra elementos horizontalmente */
+    align-items: center;       /* Centra elementos verticalmente */
+    flex-direction: column;    /* Alinea elementos en una columna */
+}
+.header__nav__list__item {
+    text-align: center;        /* Centra el texto horizontalmente */
+                               /* Más estilos aquí */
+}
+.header__nav__list__item a {
+    text-decoration: none;     /* Quita la decoración de texto subrayado */
+}
+
+
+/*#nav {
+    transition: all 0.5s ease; /* Transición suave para todos los cambios de propiedades 
+    overflow: hidden; /* Oculta el contenido que desborda cuando la altura es 0 
+}*/
+
+/*
+.header__nav__list__item img {
+    width: 50%; /* Establece el ancho de la imagen al 50% del contenedor 
+}
+*/
+
+
+/*
+.header__nav__list__item#giff {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-}
-
-
-
-.header /* quitamos lineas de la lista*/
-.header__nav 
-.header__nav__list 
-.header__nav__list__item 
-a { 
-    text-decoration: none; 
-}
-
-.header /* quitamos lineas de la lista*/
-.header__nav 
-.header__nav__list 
-.header__nav__list__item 
-img { 
-    width: 50%;
-}
+    margin-top: 10px; /* Espacio entre el último botón y la imagen GIF 
+  }
+  
+  .header__nav__list__item#giff img {
+    width: 100px; 
+    height: auto; /* Permite que la altura se ajuste proporcionalmente al ancho 
+  }
+  */
+  
