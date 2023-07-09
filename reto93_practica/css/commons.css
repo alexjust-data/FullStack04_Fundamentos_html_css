@@ -22,7 +22,27 @@
     height: 100%;      /*ajusto body a la pantalla relativa*/
     justify-content: center;
     align-items: self-end;
+
+
+    /* Configuración de grid */
+    display: grid;
+    grid-template-columns: 1fr;  /* El contenido se distribuye en una sola columna */
+    grid-template-rows: auto auto auto auto;  /* La altura de cada fila se determinará automáticamente por su contenido */
+    gap: 5px;
+    grid-template-areas: 
+    "header" 
+    "habilidades"
+    "banner"
+    "card"
+    "footer";
 }
+
+/* Asegúrate de definir las áreas de tu grid en tus otros elementos */
+.habilidades { grid-area: habilidades; }
+.banner { grid-area: banner; }
+.card { grid-area: card; }
+.footer { grid-area: footer; }
+
 
 
 
