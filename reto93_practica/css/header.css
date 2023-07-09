@@ -13,6 +13,8 @@
     grid-template-rows: minmax(100px, 200px);                /* filas rejilla */
     grid-template-areas: "header__image header__text header__nav"; /* áreas rejilla */
     gap: 10px;                              /* Espacio entre celdas rejilla */
+
+    grid-area: header;
 }
 
 #image {grid-area: header__image; }
