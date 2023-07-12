@@ -17,6 +17,7 @@
     <!--<link rel="stylesheet" href="css/info.css">-->
     <link rel="stylesheet" href="css/banner.css">
     <link rel="stylesheet" href="css/habilidades.css">
+    <link rel="stylesheet" href="css/info.css">
 
     <title>Document</title>
 </head>
@@ -116,120 +117,61 @@
     </main>
 
     <div class="card">
-        <h1>Sign in</h1>
-        <!--nuestro formulario envía la informacion a registro.html por method="get"-->
-        <!--con method="post" la informacion no se verá la dirección http-->
-        <!--http://127.0.0.1:5500/registro.html?mail=alexjusdata@gmail.com&pwd=1234-->
-        <form class="from" method="post" action="registro.html"> 
-            <!-- NOMBRE -->
-            <div class="from__element">
-                <label class="from__label" for="nombre">Name</label>
-                <input class="from__imput"
-                    type="text" 
-                    name="name" 
-                    id="name"
-                    placeholder="Add your name"
-                    required> <!-- obligas que escriba el patrón -->
-            <!-- APELLIDOS -->
-            <div class="from__element">
-                <label class="from__label" for="nombre">Surname</label>
-                <input class="from__imput"
-                    type="text" 
-                    name="surname" 
-                    id="surname"
-                    placeholder="Add your surname"
-                    required> 
-            <!-- TELEFONO -->
-            <div class="from__element">
-                <label class="from__label" for="phone">Phone</label>
-                <input class="from__imput"
-                    type="tel" 
-                    name="phone" 
-                    id="phone"
-                    title="Format telf 600-000-0000"
-                    placeholder="Format telf 600-000-0000"
-                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                    required> <!-- obligas que escriba el patrón -->
-            <!-- EMAIL -->
-            <div class="from__element">
-                <label class="from__label" for="email">Email</label>
-                <input  class="from__imput"
-                        id="email" 
-                        type="email" 
-                        name="mail"
-                        value="alexjusdata@gmail.com" 
-                        placeholder="Add your email"
-                        required>
+        <form class="form" method="post" action="registro.html"> 
+            
+            <!-- Nombre y Apellidos -->
+            <div class="form__row">
+                <div class="form__element">
+                    <label class="form__label" for="nombre">Name</label>
+                    <input class="form__input" type="text" name="name" id="name" placeholder="Add your name" required>
+                </div>
+                <div class="form__element">
+                    <label class="form__label" for="surname">Surname</label>
+                    <input class="form__input" type="text" name="surname" id="surname" placeholder="Add your surname" required>
+                </div>
             </div>
-            <div class="from__element">
-                <label class="from__label" for="age">Age</label>
-                <input class="from__imput" type="number" id="age" required min="18" max="85">
+    
+            <!-- Teléfono y Github -->
+            <div class="form__row">
+                <div class="form__element">
+                    <label class="form__label" for="phone">Phone</label>
+                    <input class="form__input" type="tel" name="phone" id="phone" placeholder="Add your phone number" required>
+                </div>
+                <div class="form__element">
+                    <label class="form__label" for="github">Tag de Github</label>
+                    <input class="form__input" type="text" name="github" id="github" placeholder="@username" pattern="^@[^\s]+" required>
+                </div>
             </div>
-            <!-- PASSPORT -->
-            <div class="from__element">
-                <label class="from__label" for="password">Password</label>
-                <input class="from__imput" type="password" required id="pwd" name="pwd">
-            </div>
-            </div>
-            <!--ESCOJE UN ARCHIVO LOCAL-->
-            <div class="from__element">
-                <label class="from__label" for="avatar">Choose avatar</label>
-                <input class="from__imput" type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" required> 
-            </div>
-            <!--AGRUPA VARIOS IMPUTS REFERIDOS AL div-->
+
+            <!-- Cómo me conociste -->
             <fieldset class="from__element">
-                <legend>Select categories</legend>
+                <legend>¿Como me conociste?</legend>
                 <div>
-                    <label class="from__label" for="cshows">shows</label>
-                    <input class="from__imput" type="radio" id="cshows" name="ccategory" cheked value="shows">
-                    <!--mismo name para que la bola vaya de uno a otro-->
-                    <label class="from__label" for="cdocus">Docus</label>
-                    <input class="from__imput" type="radio" id="cdocus" name="ccategory" value="docus">
+                    <label><input type="radio" name="source" value="universidad" required> Universidad</label>
+                    <label><input type="radio" name="source" value="kickoff" required> Keepcoding kick-off</label>
+                    <label><input type="radio" name="source" value="colegio" required> Colegio</label>
+                    <label><input type="radio" name="source" value="github" required> En Github</label>
                 </div>
             </fieldset>
-            <!--REPITO CON VARIACIÓN
-            <fieldset class="from__element">
-                <h4>Fav category</h4>
-                <div>
-                    <label class="from__label" for="shows">shows</label>
-                    <input class="from__imput" type="checkbox" id="shows" name="category" cheked value="shows"> 
-                    <label class="from__label" for="docus">Docus</label>
-                    <input class="from__imput" type="checkbox" id="docus" name="category" value="docus">
-                </div>
-            </fieldset>
-            -->
-            <!-- BIOGRAFÍA -->
-            <div class="from__element">
-                <label class="from__label" for="bio">Bio</label>
-                <textarea class="from__imput" name="bio" required id="bio" placeholder="Add your bio" required minlength="240"></textarea>
+    
+            <!-- Mensaje -->
+            <div class="form__element">
+                <label class="form__label" for="message">Message</label>
+                <textarea class="form__input" name="message" id="message" placeholder="Add your message" required maxlength="180"></textarea>
             </div>
-            <!-- REMEMBER ME -->
-            <div class="from__element from__element--checkbox">
-                <label class="from__label" for="remember">Remember me</label>
-                <input type="checkbox" name="remember" id="remember">
+    
+            <!-- Newsletter -->
+            <div class="form__element">
+                <label><input type="checkbox" name="newsletter" id="newsletter"> Subscribe to the newsletter</label>
             </div>
-            <!-- PAISES -->
-            <div class="from__element">
-                <label class="from__label" for="country">country</label>
-                <select class="from__imput" name="country" id="country" required>
-                    <option value="es"></option>
-                    <option value="es">Spain</option>
-                    <option value="us">EEUU</option>
-                </select>
-            </div>
-            <!-- RESETEA LO INTRODUCIDO -->
+    
+            <!-- Botones -->
             <div>
+                <button type="submit">Save</button>
                 <button type="reset">Reset</button>
-                <input class="btn btn--secondary" type="submit" value="Sign in">
             </div>
-            <!--
-            <details open>
-                <summary>Expande el sumario</summary>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eius, deserunt impedit reprehenderit ad quisquam tempore odit enim possimus saepe molestiae, illo expedita explicabo atque illum hic! Optio, aliquid vel.</p>
-            </details>
-            -->
         </form>
-    </div>
+    </div>    
 
     <footer class="footer" id="#section3">
         <div class="footer__media">
