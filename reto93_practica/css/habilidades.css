@@ -6,12 +6,6 @@ progress[value] {
     /* Remueve el estilo predeterminado de la barra de progreso en Chrome*/
     -webkit-appearance: none;
     appearance: none;
-
-    /* Define el estilo de la barra de progreso */
-    height: 20px;
-    border: none;
-    background-color: #eee;
-    border-radius: 10px;
 }
 
 progress[value]::-webkit-progress-bar {
@@ -89,3 +83,35 @@ progress[value]::-moz-progress-bar {
     margin-right: 10px; /* Agrega un margen derecho de 10px al elemento progress */
 }
 
+@media (max-width: 779px) {
+    .habilidades__centradas {
+        flex-direction: column; /* Cambia la dirección de las habilidades a una columna cuando la ventana sea menor a 779px */
+        align-items: center; /* Centra las habilidades en el eje horizontal cuando se muestran en una columna */
+    }
+
+    .habilidades-izquierda, .habilidades-derecha {
+        width: 100%; /* Hace que cada columna ocupe el 100% del ancho cuando se muestran en una columna */
+    }
+
+
+
+}
+
+@media (max-width: 430px) {
+    .habilidades__centradas {
+        margin-left: 0px; /* Mueve las habilidades hacia la derecha cuando la ventana sea menor a 430px */
+    }
+
+    .habilidad progress {
+        flex-grow: 2; /* Hace que el elemento progress sea más ancho cuando la ventana sea menor a 430px */
+    }
+}
+
+
+
+
+
+.calificacion {
+    display: inline-block; /* Hace que el elemento span se comporte como un bloque pero se mantenga en línea con otros elementos */
+    /* Aplica estilos adicionales aquí si es necesario */
+}

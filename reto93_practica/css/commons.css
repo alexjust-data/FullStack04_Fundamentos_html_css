@@ -38,7 +38,7 @@
 }
 
 /* Asegúrate de definir las áreas de tu grid en tus otros elementos */
-.habilidades { grid-area: habilidades; }
+#habilidades { grid-area: habilidades; }
 .banner { grid-area: banner; }
 .card { grid-area: card; }
 .footer { grid-area: footer; }

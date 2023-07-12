@@ -64,7 +64,7 @@
     max-height: 200px;                   /* Ajusta este valor según lo que necesites */
     overflow-y: auto;                    /* Muestra un scrollbar cuando el contenido se desborda */
 }
-}
+
 /* Esto establece un tamaño de fuente mínimo de 16px cuando 
 la ventana es más pequeña que 600px */
 @media (max-width: 600px) {
