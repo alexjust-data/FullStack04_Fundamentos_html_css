@@ -111,29 +111,28 @@ la ventana es más grande que 1200px */
 }
 
 
-/*#nav {
-    transition: all 0.5s ease; /* Transición suave para todos los cambios de propiedades 
-    overflow: hidden; /* Oculta el contenido que desborda cuando la altura es 0 
-}*/
-
-/*
-.header__nav__list__item img {
-    width: 50%; /* Establece el ancho de la imagen al 50% del contenedor 
-}
+/***
+* CONFIGURO BARRA SCROLL TEXTO
 */
 
+/* Esto es para Webkit (Safari, Chrome) */
+.header__text::-webkit-scrollbar {
+    width: 10px; /* cambiar ancho aquí */
+}
 
-/*
-.header__nav__list__item#giff {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px; /* Espacio entre el último botón y la imagen GIF 
-  }
-  
-  .header__nav__list__item#giff img {
-    width: 100px; 
-    height: auto; /* Permite que la altura se ajuste proporcionalmente al ancho 
-  }
-  */
-  
+.header__text::-webkit-scrollbar-track {
+    background: transparent; /* Esto hace que el track sea transparente (opcional) */
+}
+
+.header__text::-webkit-scrollbar-thumb {
+    background-color: rgb(242, 151, 224); /* pulgar blanco */
+    border-radius: 20px; 
+    border: 3px solid transparent; /* espacio entre el pulgar y el track */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Esto añade una sombra */
+}
+
+/* Esto es para Firefox */
+.header__text {
+    scrollbar-width: thin; /* cambiar ancho aquí */
+    scrollbar-color: white transparent; /* pulgar sea blanco y track transparente */
+}

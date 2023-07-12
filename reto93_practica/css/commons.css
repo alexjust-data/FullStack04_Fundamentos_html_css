@@ -10,7 +10,10 @@
 
 
 /*  <body> */
+
 .main-bg {
+
+
     background-color: var(--main-text-color); 
     color: white; 
     margin: 0;      
@@ -22,7 +25,6 @@
     height: 100%;      /*ajusto body a la pantalla relativa*/
     justify-content: center;
     align-items: self-end;
-
 
     /* Configuración de grid */
     display: grid;
@@ -37,8 +39,8 @@
     "footer";
 }
 
-/* Asegúrate de definir las áreas de tu grid en tus otros elementos */
-#habilidades { grid-area: habilidades; }
+/* áreas grid */
+.habilidades { grid-area: habilidades; }
 .banner { grid-area: banner; }
 .card { grid-area: card; }
 .footer { grid-area: footer; }

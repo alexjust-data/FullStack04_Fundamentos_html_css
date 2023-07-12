@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- añado lineas para que no guarde el caché y carguen las barras progress -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+  
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/components.css">
@@ -15,6 +20,8 @@
 
     <title>Document</title>
 </head>
+
+
 <body class="main-bg">
 
     <header class="header">
@@ -27,20 +34,20 @@
         </div>
         <nav class="header__nav" id="nav">
             <ul class="header__nav__list">
-              <li class="header__nav__list__item">
+            <li class="header__nav__list__item">
                 <!--<img src="media/carpeta.png" alt="carpeta">-->
                 <a class="button" href="#section2">Skills</a>
-              </li>
-              <li class="header__nav__list__item">
+            </li>
+            <li class="header__nav__list__item">
                 <a class="button button--large" href="#section1">About</a>
-              </li>
-              <li class="header__nav__list__item">
+            </li>
+            <li class="header__nav__list__item">
                 <a class="button" href="#section3">Contact</a>
-              </li>
+            </li>
             <!--
-              <li class="header__nav__list__item" id="giff">
-              <img src="media/giff/k-e-delgado-flame-on.gif" alt="FlameGIF">
-              </li>
+            <li class="header__nav__list__item" id="giff">
+            <img src="media/giff/k-e-delgado-flame-on.gif" alt="FlameGIF">
+            </li>
             -->
             </ul>
         </nav>
@@ -53,48 +60,59 @@
                     <div class="habilidades-izquierda">
                         <div class="habilidad">
                             <h5 class="habilidad__nombre">Reverse engineering:</h5>
-                            <progress class="barra-progreso" value="7" max="10"></progress>
-                            <p><span class="calificacion">&#9733; 7</span></p> 
+                            <!--<progress class="barra-progreso" value="7" max="10"></progress>-->
+                            <div class="barra-progreso">
+                                <div class="barra-progreso__relleno" style="width: 90%;" data-target="70"></div>
+                            </div>
                         </div>
                         <div class="habilidad">
                             <h5 class="habilidad__nombre">Ethical hacking:</h5>
-                            <progress class="barra-progreso" value="8" max="10"></progress>
-                            <p><span class="calificacion">&#9733; 8</span></p> 
+                            <div class="barra-progreso">
+                                <div class="barra-progreso__relleno" style="width: 15%;" data-target="70"></div>
+                            </div>
                         </div>
                         <div class="habilidad">
                             <h5 class="habilidad__nombre">Cryptography:</h5>
-                            <progress class="barra-progreso" value="9" max="10"></progress>
-                            <p><span class="calificacion">&#9733; </span></p> 
+                            <div class="barra-progreso">
+                                <div class="barra-progreso__relleno" style="width: 95%;" data-target="70"></div>
+                            </div>
                         </div>
                     </div>
                     <div class="habilidades-derecha">
                         <div class="habilidad">
                             <h5 class="habilidad__nombre">Social engineering:</h5>
-                            <progress class="barra-progreso" value="7" max="10"></progress>
-                            <p><span class="calificacion">&#9733; 7</span></p> 
+                            <div class="barra-progreso">
+                                <div class="barra-progreso__relleno" style="width: 85%;" data-target="70"></div>
+                            </div>
                         </div>
                         <div class="habilidad">
                             <h5 class="habilidad__nombre">Penetration testing:</h5>
-                            <progress class="barra-progreso" value="8" max="10"></progress>
-                            <p><span class="calificacion">&#9733; 8</span></p> 
+                            <div class="barra-progreso">
+                                <div class="barra-progreso__relleno" style="width: 100%;" data-target="70"></div>
+                            </div>
                         </div>
                         <div class="habilidad">
                             <h5 class="habilidad__nombre">Exploit development:</h5>
-                            <progress class="barra-progreso" value="8" max="10"></progress>
-                            <p><span class="calificacion">&#9733; 8</span></p> 
+                            <div class="barra-progreso">
+                                <div class="barra-progreso__relleno" style="width: 90%;" data-target="70"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
-    <main class="banner">
-        <div class="banner__content">
-            <h1>Unlimited movies, TV shows, and more</h1>
-            <h2>Watch anywhere, Cancel anytime</h2>
-            <p>Ready to Watch?</p>
-        </div>
+
+    <main>
+        <picture class="banner">
+            <!-- siempre arriba la de mayor valor -->
+            <source srcset="media/paisaje/paisaje_574.jpg" 
+                    media="(max-width:574px)"> <!-- a partir de 1200 debería utilizr esta foto -->
+            <source srcset="media/paisaje/paisaje_996.jpg" 
+                    media="(min-width:575px)"> <!-- a partir de 768 debería utilizr esta foto -->
+            <!-- img por defecto si fallan las demás -->
+            <img srcset="media/paisaje/paisaje_996.jpg">
+        </picture>
     </main>
 
     <div class="card">
@@ -103,6 +121,35 @@
         <!--con method="post" la informacion no se verá la dirección http-->
         <!--http://127.0.0.1:5500/registro.html?mail=alexjusdata@gmail.com&pwd=1234-->
         <form class="from" method="post" action="registro.html"> 
+            <!-- NOMBRE -->
+            <div class="from__element">
+                <label class="from__label" for="nombre">Name</label>
+                <input class="from__imput"
+                    type="text" 
+                    name="name" 
+                    id="name"
+                    placeholder="Add your name"
+                    required> <!-- obligas que escriba el patrón -->
+            <!-- APELLIDOS -->
+            <div class="from__element">
+                <label class="from__label" for="nombre">Surname</label>
+                <input class="from__imput"
+                    type="text" 
+                    name="surname" 
+                    id="surname"
+                    placeholder="Add your surname"
+                    required> 
+            <!-- TELEFONO -->
+            <div class="from__element">
+                <label class="from__label" for="phone">Phone</label>
+                <input class="from__imput"
+                    type="tel" 
+                    name="phone" 
+                    id="phone"
+                    title="Format telf 600-000-0000"
+                    placeholder="Format telf 600-000-0000"
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    required> <!-- obligas que escriba el patrón -->
             <!-- EMAIL -->
             <div class="from__element">
                 <label class="from__label" for="email">Email</label>
@@ -123,17 +170,6 @@
                 <label class="from__label" for="password">Password</label>
                 <input class="from__imput" type="password" required id="pwd" name="pwd">
             </div>
-            <!-- TELEFONO -->
-            <div class="from__element">
-                <label class="from__label" for="phone">Phone</label>
-                <input class="from__imput"
-                       type="tel" 
-                       name="phone" 
-                       id="phone"
-                       title="Format telf 600-000-0000"
-                       placeholder="Format telf 600-000-0000"
-                       pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                       required> <!-- obligas que escriba el patrón -->
             </div>
             <!--ESCOJE UN ARCHIVO LOCAL-->
             <div class="from__element">
@@ -201,6 +237,5 @@
         </div>
         <p>horizontal</p>
     </footer>
-
 </body>
 </html>

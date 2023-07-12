@@ -62,11 +62,12 @@ progress[value]::-moz-progress-bar {
 
 /* Agrega los nuevos estilos aquí */
 .habilidad {
-    display: flex; /* Establece cada habilidad como un flex container */
-    justify-content: space-between; /* Distribuye el espacio disponible entre los elementos de habilidad de manera uniforme */
-    align-items: center; /* Centra verticalmente los elementos de habilidad */
-    
+    display: flex; 
+    flex-direction: column; /* Cambia la dirección de los elementos a una columna */
+    justify-content: flex-start; /* Alinea los elementos al inicio del contenedor */
+    align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
 }
+
 
 .habilidad h5, .habilidad p {
     margin: 0; /* Elimina el margen predeterminado de los elementos h5 y p dentro de habilidad */
@@ -74,7 +75,7 @@ progress[value]::-moz-progress-bar {
 
 .habilidad__nombre {
     width: 200px; 
-    text-align: right; /* Alinea el texto a la derecha */
+    text-align: left; /* Alinea el texto a la derecha */
 }
 
 .habilidad progress {
@@ -107,11 +108,39 @@ progress[value]::-moz-progress-bar {
     }
 }
 
-
-
-
-
 .calificacion {
     display: inline-block; /* Hace que el elemento span se comporte como un bloque pero se mantenga en línea con otros elementos */
     /* Aplica estilos adicionales aquí si es necesario */
 }
+
+/****
+* BARRAS PROGRESO
+*/
+
+.barra-progreso {
+    background-color: rgb(144, 17, 144); 
+    border-radius: 10px;
+    width: 100%;
+    height: 15px;
+    overflow: hidden;
+}
+
+.barra-progreso__relleno {
+    background-color: violet; 
+    border-radius: 10px;
+    height: 100%;
+    width: 0;
+    animation: fillProgress 2s ease-out forwards;
+}
+
+.barra-progreso__relleno {
+    background-color: violet; 
+    border-radius: 10px;
+    height: 100%;
+    /* El ancho ya no se establece aquí, sino en el elemento HTML */
+    /* width: 0; */
+    /* La animación se cambia por una transición */
+    /* animation: fillProgress 2s ease-out forwards; */
+    transition: width 2s ease-out;
+}
+
