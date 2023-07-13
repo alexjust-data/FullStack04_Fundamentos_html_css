@@ -48,6 +48,7 @@ progress[value]::-moz-progress-bar {
     width: 100%; /* Modifica según necesites para ajustar el ancho del contenedor de habilidades */
     max-height: 200px; /* Ajusta este valor según lo que necesites */
     overflow-y: auto; /* Muestra un scrollbar cuando el contenido se desborda */
+
 }
 
 .habilidades__centradas {
@@ -66,6 +67,7 @@ progress[value]::-moz-progress-bar {
     flex-direction: column; /* Cambia la dirección de los elementos a una columna */
     justify-content: flex-start; /* Alinea los elementos al inicio del contenedor */
     align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
+    margin-bottom: 0.2em; /* Agrega un margen inferior a cada habilidad */
 }
 
 

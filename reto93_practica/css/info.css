@@ -14,13 +14,13 @@ form {
     display: flex;
     justify-content: space-between;
     gap: 1em;
-    margin: 1px;
+    margin: 0.2em 0; /* esto aplicará un margen de 1em en la parte superior e inferior y de 0 en los lados */
 }
 
 .form__element {
     flex: 1;
-    margin: 0em;
-    margin-bottom: 0em;
+    margin: 0.2em;
+    margin-bottom: 0.2em;
     
 }
 
@@ -37,4 +37,16 @@ form {
 /* Cómo me conociste */
 fieldset label {
     display: block;
+}
+
+.form__input[type="textarea"] {
+    height: 190px; /* Ajusta a la altura que desees */
+    resize: vertical; /* Permite al usuario redimensionar el campo solo verticalmente */
+}
+
+/* Estilos para cuando la ventana es de 780px o menos */
+@media (max-width: 780px) {
+    .form__row {
+        flex-direction: column;
+    }
 }
