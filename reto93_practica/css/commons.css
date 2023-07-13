@@ -12,31 +12,32 @@
 /*  <body> */
 
 .main-bg {
-
-
-    background-color: var(--main-text-color); 
-    color: white; 
-    margin: 0;      
-    opacity: 1;
+    background-color: var(--main-text-color); /* Establece el color de fondo */
+    color: white; /* Establece el color del texto */
+    opacity: 1; /* Establece la opacidad al 100% */
+    max-width: 1800px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */ /*OJITO CON AUTO*/
+    
     position: fixed;
     top: 0;            /*ajusto body a la pantalla relativa*/
     left: 0;           /*ajusto body a la pantalla relativa*/
-    width: 100%;       /*ajusto body a la pantalla relativa*/
-    height: 100%;      /*ajusto body a la pantalla relativa*/
+    width: auto;       /* Ancho del contenedor */
+    height: 100vh;      /* Altura del contenedor */
     justify-content: center;
-    align-items: self-end;
+    align-items: stretch; /* redimensiona verticalmente en 4k */
+
 
     /* Configuración de grid */
-    display: grid;
-    grid-template-columns: 1fr;  /* El contenido se distribuye en una sola columna */
-    grid-template-rows: auto auto auto auto;  /* La altura de cada fila se determinará automáticamente por su contenido */
-    gap: 5px;
+    display: grid; 
+    grid-template-columns: 1fr; /* Una columna en la cuadrícula */
+    grid-template-rows: auto auto auto auto; /* Tamaño automático para 4 filas */
+    gap: 5px; /* Espacio de 5px entre celdas */
     grid-template-areas: 
-    "header" 
-    "habilidades"
-    "banner"
-    "card"
-    "footer";
+        "header" 
+        "habilidades"
+        "banner"
+        "card"
+        "footer"; 
 }
 
 /* áreas grid */
@@ -44,8 +45,5 @@
 .banner { grid-area: banner; }
 .card { grid-area: card; }
 .footer { grid-area: footer; }
-
-
-
 
 

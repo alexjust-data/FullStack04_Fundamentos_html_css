@@ -1,13 +1,26 @@
 
+
+.card {
+    max-width: 1800px;
+    width: 100%;
+    margin: auto;
+}
+
+form {
+    width: 100%;
+}
+
 .form__row {
     display: flex;
     justify-content: space-between;
     gap: 1em;
+    margin: 1px;
 }
 
 .form__element {
     flex: 1;
-    margin: 0.5em;
+    margin: 0em;
+    margin-bottom: 0em;
     
 }
 
@@ -16,17 +29,12 @@
     text-align: left; /* Alinea el texto a la derecha */
 }
 
-.card {
-    max-width: 800px;
-    width: 80%;
-    margin: auto;
-}
-
-fieldset label {
-    display: block;
-}
-
-form {
+/* campos de entrada reescalen */
+.form__input {
     width: 100%;
 }
 
+/* Cómo me conociste */
+fieldset label {
+    display: block;
+}
