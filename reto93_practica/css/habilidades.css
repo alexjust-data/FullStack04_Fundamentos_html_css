@@ -53,7 +53,7 @@ progress[value]::-moz-progress-bar {
 .habilidades__centradas {
     display: flex; /* Establece las habilidades centradas como un flex container */
     justify-content: space-between; /* Distribuye el espacio disponible entre las habilidades de manera uniforme */
-    width: 80%; /* Modifica según necesites para ajustar el ancho de las columnas de habilidades */
+    width: 80%; /* ajustar el ancho de las columnas de habilidades */
 }
 
 .habilidades-izquierda, .habilidades-derecha {
@@ -93,9 +93,6 @@ progress[value]::-moz-progress-bar {
     .habilidades-izquierda, .habilidades-derecha {
         width: 100%; /* Hace que cada columna ocupe el 100% del ancho cuando se muestran en una columna */
     }
-
-
-
 }
 
 @media (max-width: 430px) {
@@ -109,14 +106,12 @@ progress[value]::-moz-progress-bar {
 }
 
 .calificacion {
-    display: inline-block; /* Hace que el elemento span se comporte como un bloque pero se mantenga en línea con otros elementos */
-    /* Aplica estilos adicionales aquí si es necesario */
+    display: inline-block; /* el elemento span como un bloque pero en línea con otros elementos */
 }
 
 /****
 * BARRAS PROGRESO
 */
-
 .barra-progreso {
     background-color: rgb(144, 17, 144); 
     border-radius: 10px;
