@@ -1,29 +1,37 @@
-
 .footer {
     background-color: var(--main-bg-color);
-    text-align: center;           /* alinear textos horizontalmente */
-
-
-
-}
-
-.footer
-.footer__nipon img {
+    text-align: center;
+    flex-grow: 1; /* Hace que el footer ocupe todo el espacio vertical disponible */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-items: flex-start;
-    top: 0;            /*ajusto body a la pantalla relativa*/
-    left: 0;           /*ajusto body a la pantalla relativa*/
-    width: 100%;       /*ajusto body a la pantalla relativa*/
-    height: 100%;      /*ajusto body a la pantalla relativa*/
 }
 
-.footer
+.footer__media {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra verticalmente los elementos dentro de .footer__media */
+    opacity: 90%;
+    gap: 20px;
+}
+
 .footer__media img {
-    justify-content: center;
-    align-items: flex-start;
-    top: 0;            
-    left: 0;           
-    width: 50%;       
-    height: 50%;      
+    /* No necesitamos 'justify-content', 'align-items', 'top', y 'left' aquí */
+    width: 35%; /* hacer las imágenes más pequeñas */
+    height: 35%; /* hacer las imágenes más pequeñas */
+}
+
+@media (max-width: 780px) {
+    .footer__media img {
+        max-width: 100%; /* Las imágenes no se harán más grandes a partir de 780px */
+        max-height: 100%;
+    }
+}
+
+.footer__media p {
+    margin: 0; /* Elimina el margen predeterminado del párrafo */
+    font-size: 15px; /* Ajusta el tamaño de fuente según sea necesario */
+    color: var(--main-brand-color);
 }
 
