@@ -10,7 +10,6 @@
 
 
 /*  <body> */
-
 .main-bg {
     background-color: var(--main-text-color); /* Establece el color de fondo */
     color: white; /* Establece el color del texto */
@@ -18,13 +17,13 @@
     max-width: 1800px; /* Ancho máximo del contenedor */
     margin: 0 auto; /* Centra el contenedor horizontalmente */ /*OJITO CON AUTO*/
     
-    position: fixed;
+    position: center;
     top: 0;            /*ajusto body a la pantalla relativa*/
     left: 0;           /*ajusto body a la pantalla relativa*/
-    width: auto;       /* Ancho del contenedor */
-    height: 100vh;      /* Altura del contenedor */
+    width: 100%;       /* Ancho del contenedor */
+    height: 100%;      /* Altura del contenedor */
     justify-content: center;
-    align-items: stretch; /* redimensiona verticalmente en 4k */
+    align-items: normal; /* redimensiona verticalmente en 4k */
 
 
     /* Configuración de grid */
