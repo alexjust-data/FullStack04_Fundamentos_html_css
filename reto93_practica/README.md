@@ -31,7 +31,7 @@ correctos como la validación html de cada input.
 ○ Apellidos - (campo requerido)  
 ○ Teléfono - (campo requerido)  
 ○ Unos radio input para responder a la pregunta "¿como me conociste?" -  
-(requerido)
+(requerido)  
 ■ Universidad  
 ■ Keepcoding kick-off  
 ■ Colegio  
