@@ -129,6 +129,17 @@ body {
     }
 }
 
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+video {
+    animation-name: fadeIn;
+    animation-duration: 15s;
+}
+
+
 /***
 * ROW 4
 * 
