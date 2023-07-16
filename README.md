@@ -54,4 +54,4 @@ práctica.
 
 ## link al proyecto
 
-https://alexjust-data.github.io/FullStack_Fundamentos_html_css/practica/index.html
+https://alexjust-data.github.io/FullStack_Fundamentos_html_css/reto93_practica/index.html
