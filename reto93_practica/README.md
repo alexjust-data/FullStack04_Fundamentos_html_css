@@ -30,12 +30,11 @@ correctos como la validación html de cada input.
 > ○ Nombre - (campo requerido)  
 > ○ Apellidos - (campo requerido)  
 > ○ Teléfono - (campo requerido)  
-> ○ Unos radio input para responder a la pregunta "¿como me conociste?" -  
-(requerido)  
-> ■ Universidad  
-> ■ Keepcoding kick-off  
-> ■ Colegio  
-> ■ En Github  
+> ○ Unos radio input para responder a la pregunta "¿como me conociste?" -  (requerido)  
+> * Universidad  
+> * Keepcoding kick-off  
+> * Colegio  
+> * En Github  
 > ○ Tag de github (Usar regexp “^@[^\s]+” para la validación - @username)  
 > ○ Mensaje con más información del usuario (Text area max 180 characters) -
 (campo requerido)  
