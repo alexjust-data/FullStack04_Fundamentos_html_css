@@ -1,0 +1,143 @@
+
+/***
+* BARRAS
+*********/
+progress[value] {
+    /* Remueve el estilo predeterminado de la barra de progreso en Chrome*/
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: rgb(144, 17, 144); /* Color de fondo de la barra */
+    border-radius: 10px;
+}
+
+progress[value]::-webkit-progress-value {
+    background-color: violet; /* Color de la barra */
+    border-radius: 10px;
+}
+
+progress[value]::-moz-progress-bar {
+    background-color: violet; /* Color de la barra */
+    border-radius: 10px;
+}
+
+/**************************
+* ESTILO
+**************************/
+
+#habilidades {
+    display: flex; /* flex container */
+    flex-direction: column; /* Alinea los elementos de habilidades en una columna */
+    align-items: center; /* Centra horizontalmente en el contenedor de habilidades */
+    justify-content: center; /* Centra verticalmente en el contenedor de habilidades */
+    height: 100%; /* altura del contenedor habilidades al 100% del elemento padre */
+    width: 100%; /* ancho del contenedor habilidades al 100% del elemento padre */
+}
+
+.grupo-habilidades {
+    display: flex; /* flex container */
+    justify-content: center; /* Centra horizontalmente grupo de habilidades */
+    width: 100%; /* que ocupe todo el ancho en pantallas pequeñas */
+}
+
+.habilidades {
+    display: flex; /* Establece el contenedor de habilidades como un flex container */
+    justify-content: center; /* Centra los elementos horizontalmente en el contenedor de habilidades */
+    width: 100%; /* Modifica según necesites para ajustar el ancho del contenedor de habilidades */
+    max-height: 200px; /* Ajusta este valor según lo que necesites */
+    overflow-y: auto; /* Muestra un scrollbar cuando el contenido se desborda */
+
+}
+
+.habilidades__centradas {
+    display: flex; /* Establece las habilidades centradas como un flex container */
+    justify-content: space-between; /* Distribuye el espacio disponible entre las habilidades de manera uniforme */
+    width: 80%; /* ajustar el ancho de las columnas de habilidades */
+}
+
+.habilidades-izquierda, .habilidades-derecha {
+    width: 50%; /* Establece que cada columna de habilidades ocupe la mitad del contenedor de habilidades__centradas */
+}
+
+/* Agrega los nuevos estilos aquí */
+.habilidad {
+    display: flex; 
+    flex-direction: column; /* Cambia la dirección de los elementos a una columna */
+    justify-content: flex-start; /* Alinea los elementos al inicio del contenedor */
+    align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
+    margin-bottom: 0.2em; /* Agrega un margen inferior a cada habilidad */
+}
+
+
+.habilidad h5, .habilidad p {
+    margin: 0; /* Elimina el margen predeterminado de los elementos h5 y p dentro de habilidad */
+}
+
+.habilidad__nombre {
+    width: 200px; 
+    text-align: left; /* Alinea el texto a la derecha */
+}
+
+.habilidad progress {
+    flex-grow: 1; /* Hace que el elemento progress ocupe todo el espacio disponible en habilidad */
+    margin-left: 10px; /* Agrega un margen izquierdo de 10px al elemento progress */
+    margin-right: 10px; /* Agrega un margen derecho de 10px al elemento progress */
+}
+
+@media (max-width: 779px) {
+    .habilidades__centradas {
+        flex-direction: column; /* Cambia la dirección de las habilidades a una columna cuando la ventana sea menor a 779px */
+        align-items: center; /* Centra las habilidades en el eje horizontal cuando se muestran en una columna */
+    }
+
+    .habilidades-izquierda, .habilidades-derecha {
+        width: 100%; /* Hace que cada columna ocupe el 100% del ancho cuando se muestran en una columna */
+    }
+}
+
+@media (max-width: 430px) {
+    .habilidades__centradas {
+        margin-left: 0px; /* Mueve las habilidades hacia la derecha cuando la ventana sea menor a 430px */
+    }
+
+    .habilidad progress {
+        flex-grow: 2; /* Hace que el elemento progress sea más ancho cuando la ventana sea menor a 430px */
+    }
+}
+
+.calificacion {
+    display: inline-block; /* el elemento span como un bloque pero en línea con otros elementos */
+}
+
+/****
+* BARRAS PROGRESO
+*/
+.barra-progreso {
+    background-color: rgb(144, 17, 144); 
+    border-radius: 10px;
+    width: 100%;
+    height: 15px;
+    overflow: hidden;
+}
+
+.barra-progreso__relleno {
+    background-color: violet; 
+    border-radius: 10px;
+    height: 100%;
+    width: 0;
+    animation: fillProgress 2s ease-out forwards;
+}
+
+.barra-progreso__relleno {
+    background-color: violet; 
+    border-radius: 10px;
+    height: 100%;
+    /* El ancho ya no se establece aquí, sino en el elemento HTML */
+    /* width: 0; */
+    /* La animación se cambia por una transición */
+    /* animation: fillProgress 2s ease-out forwards; */
+    transition: width 2s ease-out;
+}
+

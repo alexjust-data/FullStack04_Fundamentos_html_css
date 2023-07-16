@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- añado lineas para que no guarde el caché y carguen las barras progress -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+  
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/commons.css">
+    <!--<link rel="stylesheet" href="css/info.css">-->
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/habilidades.css">
+    <link rel="stylesheet" href="css/info.css">
+
+    <title>Document</title>
+</head>
+
+
+<body class="main-bg">
+
+    <header class="header">
+        <div class="header__image" id="image">
+            <img src="media/fotor_ai_775.jpg" alt="avatar">
+        </div>
+        <div class="header__text" id="text">
+            <h3> Ven Otawa </h3>
+            <p>Soy <strong>Ven Otawa</strong>, una luciérnaga ciberpunk. Experta en arquitectura de código Pi. Mi amo me creó como virus inmutable con el objetivo de buscar y enfrentar nuevos desafíos; invítame a desplazar mi arte entre tus bloques de código y mejoraré tus funciones. <strong>Te estoy buscando.</strong></p>
+        </div>
+        <nav class="header__nav" id="nav">
+            <ul class="header__nav__list">
+                <li class="header__nav__list__item">
+                    <!--<img src="media/carpeta.png" alt="carpeta">-->
+                    <a class="button" href="#section2">Skills</a>
+                </li>
+                <li class="header__nav__list__item">
+                    <a class="button button--large" href="projects.html">Projects</a>
+                </li>
+                <li class="header__nav__list__item">
+                    <a class="button" href="#section3">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="section2">
+        <div id="habilidades">
+            <div class="grupo-habilidades">
+                <div class="habilidades">
+                    <div class="habilidades__centradas">
+                        <div class="habilidades-izquierda">
+                            <div class="habilidad">
+                                <h5 class="habilidad__nombre">Reverse engineering:</h5>
+                                <!--<progress class="barra-progreso" value="7" max="10"></progress>-->
+                                <div class="barra-progreso">
+                                    <div class="barra-progreso__relleno" style="width: 90%;" data-target="70"></div>
+                                </div>
+                            </div>
+                            <div class="habilidad">
+                                <h5 class="habilidad__nombre">Ethical hacking:</h5>
+                                <div class="barra-progreso">
+                                    <div class="barra-progreso__relleno" style="width: 15%;" data-target="70"></div>
+                                </div>
+                            </div>
+                            <div class="habilidad">
+                                <h5 class="habilidad__nombre">Cryptography:</h5>
+                                <div class="barra-progreso">
+                                    <div class="barra-progreso__relleno" style="width: 95%;" data-target="70"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="habilidades-derecha">
+                            <div class="habilidad">
+                                <h5 class="habilidad__nombre">Social engineering:</h5>
+                                <div class="barra-progreso">
+                                    <div class="barra-progreso__relleno" style="width: 85%;" data-target="70"></div>
+                                </div>
+                            </div>
+                            <div class="habilidad">
+                                <h5 class="habilidad__nombre">Penetration testing:</h5>
+                                <div class="barra-progreso">
+                                    <div class="barra-progreso__relleno" style="width: 100%;" data-target="70"></div>
+                                </div>
+                            </div>
+                            <div class="habilidad">
+                                <h5 class="habilidad__nombre">Exploit development:</h5>
+                                <div class="barra-progreso">
+                                    <div class="barra-progreso__relleno" style="width: 90%;" data-target="70"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <picture class="banner">
+            <!-- siempre arriba la de mayor valor -->
+            <source srcset="media/paisaje/paisaje_574.jpg" 
+                    media="(max-width:574px)"> <!-- a partir de 1200 debería utilizr esta foto -->
+            <source srcset="media/paisaje/paisaje_996.jpg" 
+                    media="(min-width:575px)"> <!-- a partir de 768 debería utilizr esta foto -->
+            <!-- img por defecto si fallan las demás -->
+            <img srcset="media/paisaje/paisaje_996.jpg">
+        </picture>
+    </main>
+
+    <div id="section3">
+        <div class="card">
+            <form class="form" method="post" action="registro.html"> 
+                
+                <!-- Nombre y Apellidos -->
+                <div class="form__row">
+                    <div class="form__element">
+                        <label class="form__label" for="nombre">Name</label>
+                        <input class="form__input" type="text" name="name" id="name" placeholder="Add your name" required>
+                    </div>
+                    <div class="form__element">
+                        <label class="form__label" for="surname">Surname</label>
+                        <input class="form__input" type="text" name="surname" id="surname" placeholder="Add your surname" required>
+                    </div>
+                </div>
+        
+                <!-- Teléfono y Github -->
+                <div class="form__row">
+                    <div class="form__element">
+                        <label class="form__label" for="phone">Phone</label>
+                        <input class="form__input" type="tel" name="phone" id="phone" placeholder="Add your phone number" required>
+                    </div>
+                    <div class="form__element">
+                        <label class="form__label" for="github">Tag de Github</label>
+                        <input class="form__input" type="text" name="github" id="github" placeholder="@username" pattern="^@[^\s]+" required>
+                    </div>
+                </div>
+    
+                        <!-- Cómo me conociste -->
+                <fieldset class="from__element">
+                    <legend>¿Como me conociste?</legend>
+                    <div>
+                        <label><input type="radio" name="source" value="universidad" required> Universidad</label>
+                        <label><input type="radio" name="source" value="kickoff" required> Keepcoding kick-off</label>
+                        <label><input type="radio" name="source" value="colegio" required> Colegio</label>
+                        <label><input type="radio" name="source" value="github" required> En Github</label>
+                    </div>
+                </fieldset>
+        
+                <!-- Mensaje -->
+                <div class="form__element">
+                    <label class="form__label" for="message">Message</label>
+                    <textarea class="form__input" type="textarea" name="message" id="message" placeholder="Add your message" required maxlength="180"></textarea>
+                </div>
+        
+                <!-- Newsletter -->
+                <div class="form__element">
+                    <label><input type="checkbox" name="newsletter" id="newsletter"> Subscribe to the newsletter</label>
+                </div>
+        
+                <!-- Botones -->
+                <div>
+                    <button type="submit">Save</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+        </div>  
+    </div>  
+
+    <footer class="footer" id="">
+        <div class="footer__media">
+            <a href="https://www.twitter.com/nombredeusuario" target="_blank">
+                <img src="media/footer/tweeter.png" alt="Twitter">
+            </a>
+            <a href="https://web.whatsapp.com/nombredeusuario" target="_blank">
+                <img src="media/footer/whats.png" alt="Twitter">
+            </a>
+            <a href="https://www.instagram.com/nombredeusuario" target="_blank">
+                <img src="media/footer/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/nombredeusuario" target="_blank">
+                <img src="media/footer/meta.png" alt="Facebook">
+            </a>
+        </div>
+    </footer>
+
+</body>
+</html>

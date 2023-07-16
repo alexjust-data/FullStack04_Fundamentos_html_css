@@ -1,0 +1,17 @@
+
+
+.banner {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.responsive-image {
+    width: 100%;
+    min-height: 200px; /* Ajustar a tu necesidad */
+    object-fit: cover;
+}

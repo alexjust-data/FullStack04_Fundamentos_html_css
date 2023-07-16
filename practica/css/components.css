@@ -1,0 +1,44 @@
+
+
+
+.button {
+   height: 40px;             /* alto */
+   width: 70px;              /* ancho */
+
+   display: flex;            /* Usa el modelo de caja flexible */
+   align-items: center;      /* Centra verticalmente los elementos en el contenedor */
+   justify-content: center;  /* Centra horizontalmente los elementos en el contenedor */
+
+   background-color: var(--main-brand-color); /* Color de fondo */
+   border-radius: 5px;       /* Borde redondeado */
+   outline: 1px solid rgb(235, 124, 211); /* Doble borde */
+   outline-offset: -4px;     /* Superposición del doble borde */
+   
+   color: rgba(255, 255, 255, 0.85); /* color texto con opacidad */
+   margin: 10px;             /* margen alrededor de los botones */
+   margin-right: 50px;       /* margen solo en el lado derecho */
+   overflow: hidden;         /* Oculta el contenido que desborda */
+   position: relative;       /* Posición relativa */
+   transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
+}
+
+.button:hover {
+  background-color: var(--hover-color); /* --hover-color será el color de fondo en el estado hover */
+  transition: background-color 0.3s ease; /* suaviza la transición entre los colores */
+}
+
+
+
+@media (max-width: 390px) {
+   .button {
+     height: 30px; /* Reducir altura */
+     width: 60px; /* Reducir ancho */
+     font-size: 12px; /* Reducir tamaño de fuente */
+     margin: 10px; /* Ajustar margen */
+     margin-right: 40px; /* Ajustar margen derecho */
+   }
+ }
+ 
+
+   
+    

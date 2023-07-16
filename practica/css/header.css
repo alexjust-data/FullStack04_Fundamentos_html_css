@@ -1,0 +1,140 @@
+
+.header {
+    position: sticky; /* Elemento fijo en la posición especificada */
+    z-index: 999;                           /* Capa z para el elemento */
+    min-height: 200px;                      /* Altura mínima del elemento */
+    max-height: 200px;                      /* Altura máxima del elemento */
+    background-size: cover;                 /* Ajusta el tamaño del fondo para cubrir el contenedor */
+    background-color: var(--main-bg-color); /* Color de fondo */
+    align-items: center;                    /* Centra verticalmente los elementos en el contenedor */
+
+    display: grid;                          /* modelo rejilla */
+    grid-template-columns: auto auto 70px;  /* columnas rejilla */
+    grid-template-rows: minmax(100px, 200px);                /* filas rejilla */
+    grid-template-areas: "header__image header__text header__nav"; /* áreas rejilla */
+    gap: 10px;                              /* Espacio entre celdas rejilla */
+
+    grid-area: header;
+}
+
+.image {grid-area: header__image; }
+.text {grid-area: header__text; }
+.nav {grid-area: header__nav; }
+
+
+/****
+*IMAGEN
+********/
+.header__image {
+    width: 100%;      /* Este será el tamaño del contenedor de la imagen */
+    min-width: 0px;
+    height: 100%; /* Altura del 100% respecto a su contenedor */
+    height: 97%; /* Ajusta la altura del contenedor de la imagen en base a la altura del header y el padding */
+    padding-left: 2%;
+    overflow: hidden; /* Cualquier parte de la imagen que exceda el tamaño del contenedor se ocultará */
+    
+}
+.header__image img {
+    width: 100%; /* img ocupará el 100% del ancho de su contenedor */
+    height: 100%; /* img ocupará el 100% de la altura de su contenedor */
+    object-fit: cover; /* Esto ajustará la imagen para  */
+    border-radius: 5px;
+}
+
+
+@media (max-width: 390px) {
+    .header {
+        grid-template-columns: auto auto;  /* Ahora solo hay dos columnas */
+        grid-template-areas: "header__image header__text";  /* Ahora solo hay dos áreas */
+    }
+
+    #nav {
+        display: none; /* Esto oculta el elemento con id 'nav' */
+    }
+}
+
+/****
+*TEXTO
+********/
+.header__text {
+    /*font-size: 2vw; /* Ajusta este valor como necesites */
+    word-wrap: break-word;               /* rompe la linea */
+    text-align: justify;                 /* Esto justificará el texto */
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--main-text-color);
+    padding-right: 3%;
+    max-height: 100%;                   /* Ajusta este valor según lo que necesites */
+    overflow-y: auto;                    /* Muestra un scrollbar cuando el contenido se desborda */
+}
+
+/* Esto establece un tamaño de fuente mínimo de 16px cuando 
+la ventana es más pequeña que 600px */
+@media (max-width: 600px) {
+    .header__text {
+        font-size: 16px;
+    }
+}
+/* Esto establece un tamaño de fuente máximo de 36px cuando 
+la ventana es más grande que 1200px */
+@media (min-width: 1000px) {
+    .header__text {
+        font-size: 18px;
+    } 
+}
+@media (max-width: 550px) {
+    .header__text {
+        font-size: 14px;
+    } 
+}
+
+/****
+* NAV
+********/
+.header__nav {
+    max-width: 150px; 
+    display: flex;              /* Flexbox para centrar el contenido horizontalmente */
+    justify-content: center;    /* Centra horizontalmente */
+    align-items: center;        /* Centra verticalmente */
+    padding-right: 8%;
+}
+.header__nav__list {
+    list-style: none;          /* Quita los puntos de la lista */
+    display: flex;             /* Flexbox para alinear los elementos horizontalmente */
+    justify-content: center;   /* Centra elementos horizontalmente */
+    align-items: center;       /* Centra elementos verticalmente */
+    flex-direction: column;    /* Alinea elementos en una columna */
+}
+.header__nav__list__item {
+    text-align: center;        /* Centra el texto horizontalmente */
+                               /* Más estilos aquí */
+}
+.header__nav__list__item a {
+    text-decoration: none;     /* Quita la decoración de texto subrayado */
+}
+
+
+/***
+* CONFIGURO BARRA SCROLL TEXTO
+*/
+
+/* Esto es para Webkit (Safari, Chrome) */
+.header__text::-webkit-scrollbar {
+    width: 10px; /* cambiar ancho aquí */
+}
+
+.header__text::-webkit-scrollbar-track {
+    background: transparent; /* Esto hace que el track sea transparente (opcional) */
+}
+
+.header__text::-webkit-scrollbar-thumb {
+    background-color: rgb(242, 151, 224); /* pulgar blanco */
+    border-radius: 20px; 
+    border: 3px solid transparent; /* espacio entre el pulgar y el track */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Esto añade una sombra */
+}
+
+/* Esto es para Firefox */
+.header__text {
+    scrollbar-width: thin; /* cambiar ancho aquí */
+    scrollbar-color: white transparent; /* pulgar sea blanco y track transparente */
+}

@@ -1,0 +1,37 @@
+.footer {
+    background-color: var(--main-bg-color);
+    text-align: center;
+    flex-grow: 1; /* Hace que el footer ocupe todo el espacio vertical disponible */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__media {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra verticalmente los elementos dentro de .footer__media */
+    opacity: 90%;
+    gap: 20px;
+}
+
+.footer__media img {
+    /* No necesitamos 'justify-content', 'align-items', 'top', y 'left' aquí */
+    width: 35%; /* hacer las imágenes más pequeñas */
+    height: 35%; /* hacer las imágenes más pequeñas */
+}
+
+@media (max-width: 780px) {
+    .footer__media img {
+        max-width: 100%; /* Las imágenes no se harán más grandes a partir de 780px */
+        max-height: 100%;
+    }
+}
+
+.footer__media p {
+    margin: 0; /* Elimina el margen predeterminado del párrafo */
+    font-size: 15px; /* Ajusta el tamaño de fuente según sea necesario */
+    color: var(--main-brand-color);
+}
+

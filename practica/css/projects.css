@@ -1,0 +1,168 @@
+:root {
+    --main-bg-color: #FF00FF;
+    --main-text-color: rgb(3, 3, 3);
+    --main-brand-color: darkblue;                      /*para los botones*/
+    --main-brand-color-light: rgb(227, 130, 130); /*para cuanto pasemor por encima del botón*/
+    font-family: sans-serif;                        /* utilizará estas */
+}
+
+body {
+    max-width: 1800px;
+    max-height: 1950px;
+    margin: 0 auto; /* Centra el contenido si la ventana del navegador es más ancha que 2000px */
+    overflow: auto; /* Permite el desplazamiento si el contenido supera las dimensiones máximas */
+}
+
+
+.main-bg__projects {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "giff1 shows__video giff2"
+        "youtube-videos-left video-descriptions youtube-videos-right"
+        "footer footer footer";
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 1em;
+    height: 100vh;
+    background-color: var(--main-text-color);
+}
+
+.header { grid-area: header; }
+.shows__video { grid-area: shows__video; }
+.giff1 { grid-area: giff1; }
+.giff2 { grid-area: giff2; }
+.youtube-videos-left { grid-area: youtube-videos-left; }
+.video-descriptions { grid-area: video-descriptions; }
+.youtube-videos-right { grid-area: youtube-videos-right; }
+.footer { grid-area: footer; }
+
+/***
+* ROW 2
+********/
+.shows__video {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    min-width: 200px; /* tamaño mínimo del area al reescalar */
+}
+
+.giff1,
+.shows__video,
+.giff2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px; /* tamaño mínimo del area al reescalar */
+    background-color: var(--main-text-color);
+}
+
+.giff1 img,
+.giff2 img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* Esto hace que la imagen mantenga sus proporciones mientras se ajusta al contenedor */
+}
+
+.shows__video video {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+
+/***
+* ROW 3
+***********/
+
+.youtube-videos-left,
+.youtube-videos-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--main-text-color);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Para una relación de aspecto 16:9 */
+    height: auto;
+    overflow: hidden;
+    margin-top: 30px;
+    width: 95%; /* Este ancho es relativo al tamaño de la pantalla. Puedes ajustarlo a tus necesidades */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+@media screen and (max-width: 780px) {
+    .video-container {
+        flex: 0 1 100%;
+    }
+}
+
+.video-descriptions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    padding: 1em;
+    color: white;
+    font-size: clamp(1rem, 2.5vw, 1.5rem); /* Esta línea permite que el texto se reescale entre 1rem y 1.5rem dependiendo del ancho de la pantalla. */
+}
+
+.video-descriptions strong {
+    text-decoration: underline;
+}
+
+
+@media (min-width: 2000px) {
+    body {
+        width: 2000px;
+        margin: 0 auto; /* Centra el contenido si la ventana del navegador es más ancha que 2000px */
+    }
+}
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+video {
+    animation-name: fadeIn;
+    animation-duration: 15s;
+}
+
+
+/***
+* ROW 4
+* 
+* NAV
+********/
+.footer__nav {
+    max-width: 150px; 
+    display: flex;              /* Flexbox para centrar el contenido horizontalmente */
+    justify-content: center;    /* Centra horizontalmente */
+    align-items: center;        /* Centra verticalmente */
+    padding-right: 8%;
+}
+.footer__nav__list {
+    list-style: none;          /* Quita los puntos de la lista */
+    display: flex;             /* Flexbox para alinear los elementos horizontalmente */
+    justify-content: center;   /* Centra elementos horizontalmente */
+    align-items: center;       /* Centra elementos verticalmente */
+    flex-direction: column;    /* Alinea elementos en una columna */
+}
+.footer__nav__list__item {
+    text-align: center;        /* Centra el texto horizontalmente */
+                               /* Más estilos aquí */
+}
+.footer__nav__list__item a {
+    text-decoration: none;     /* Quita la decoración de texto subrayado */
+}
