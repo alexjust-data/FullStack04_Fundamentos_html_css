@@ -1,8 +1,8 @@
-# Full Stack web apps [Bootcamp]
+# Full Stack [Bootcamp]
 
 ## Fundamentos Web: HTML5, CSS3
 
-### Creación de un portfolio para un avatar
+### Creación de un portfolio para un avatar indeterminado.
 
 
 **Consideraciones generales**
@@ -27,21 +27,21 @@ animaciones css.
 otra, para darle más sentido al diseño en dicha resolución.
 * Formulario de contacto con estos inputs. Todos ellos tienen que tener tanto los tipos
 correctos como la validación html de cada input.
-○ Nombre - (campo requerido)  
-○ Apellidos - (campo requerido)  
-○ Teléfono - (campo requerido)  
-○ Unos radio input para responder a la pregunta "¿como me conociste?" -  
+> ○ Nombre - (campo requerido)  
+> ○ Apellidos - (campo requerido)  
+> ○ Teléfono - (campo requerido)  
+> ○ Unos radio input para responder a la pregunta "¿como me conociste?" -  
 (requerido)  
-■ Universidad  
-■ Keepcoding kick-off  
-■ Colegio  
-■ En Github  
-○ Tag de github (Usar regexp “^@[^\s]+” para la validación - @username)  
-○ Mensaje con más información del usuario (Text area max 180 characters) -
+> ■ Universidad  
+> ■ Keepcoding kick-off  
+> ■ Colegio  
+> ■ En Github  
+> ○ Tag de github (Usar regexp “^@[^\s]+” para la validación - @username)  
+> ○ Mensaje con más información del usuario (Text area max 180 characters) -
 (campo requerido)  
-○ Acceso a la newsletter (Checkbox)  
-○ Botón de guardado  
-○ Botón de reset  
+> ○ Acceso a la newsletter (Checkbox)  
+> ○ Botón de guardado  
+> ○ Botón de reset  
 * Footer con links a nuestras redes sociales. Importante tener en cuenta que son links
 a recursos externos.  
 * Nueva página que tenga un video que se reproduzca al entrar en la web y aparezca
@@ -49,7 +49,7 @@ con una animación de fadeIn.
 * En la nueva página crear un grid con nuestros proyectos. Ver capturas para el
 diseño.  
 * README con toda la información necesaria para facilitar la forma de evaluar la
-práctica. https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/  
+práctica. 
 
-## linnk al proyecto
+## link al proyecto
 
