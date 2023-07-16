@@ -27,6 +27,7 @@ animaciones css.
 otra, para darle más sentido al diseño en dicha resolución.
 * Formulario de contacto con estos inputs. Todos ellos tienen que tener tanto los tipos
 correctos como la validación html de cada input.
+>
 > ○ Nombre - (campo requerido)  
 > ○ Apellidos - (campo requerido)  
 > ○ Teléfono - (campo requerido)  
@@ -34,7 +35,8 @@ correctos como la validación html de cada input.
 > * Universidad  
 > * Keepcoding kick-off  
 > * Colegio  
-> * En Github  
+> * En Github   
+>
 > ○ Tag de github (Usar regexp “^@[^\s]+” para la validación - @username)  
 > ○ Mensaje con más información del usuario (Text area max 180 characters) -
 (campo requerido)  
