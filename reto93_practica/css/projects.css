@@ -1,0 +1,147 @@
+:root {
+    --main-bg-color: #FF00FF;
+    --main-text-color: rgb(3, 3, 3);
+    --main-brand-color: darkblue;                      /*para los botones*/
+    --main-brand-color-light: rgb(227, 130, 130); /*para cuanto pasemor por encima del botón*/
+    font-family: sans-serif;                        /* utilizará estas */
+}
+
+
+.main-bg__projects {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "giff1 shows__video giff2"
+        "youtube-videos-left empty youtube-videos-right"
+        "footer footer footer";
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 1em;
+    height: 100vh;
+    background-color: gray;
+}
+
+.header { grid-area: header; }
+.shows__video { grid-area: shows__video; }
+.giff1 { grid-area: giff1; }
+.giff2 { grid-area: giff2; }
+.empty { grid-area: empty; }
+.youtube-videos-left { grid-area: youtube-videos-left; }
+.youtube-videos-right { grid-area: youtube-videos-right; }
+.footer { grid-area: footer; }
+
+/***
+* ROW 2
+********/
+.shows__video {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    min-width: 200px; /* tamaño mínimo del area al reescalar */
+}
+
+.giff1,
+.shows__video,
+.giff2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px; /* tamaño mínimo del area al reescalar */
+    background-color: var(--main-text-color);
+}
+
+.giff1 img,
+.giff2 img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* Esto hace que la imagen mantenga sus proporciones mientras se ajusta al contenedor */
+}
+
+.shows__video video {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+
+/***
+* ROW 3
+***********/
+
+.youtube-videos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--main-text-color);
+}
+
+.youtube-videos-left,
+.youtube-videos-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--main-text-color);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Para una relación de aspecto de 16:9 */
+    height: 0;
+    overflow: hidden;
+    margin-top: 30px; /* Margen para que la descripción del video no quede solapada */
+}
+
+.video-container p {
+    position: absolute;
+    top: -20px; /* Posiciona el texto encima del video */
+    color: white; /* Cambia el color del texto para que sea visible contra el fondo oscuro */
+    z-index: 2;
+}
+
+
+@media screen and (max-width: 780px) {
+    .main-bg__projects {
+        grid-template-areas:
+            "header header header"
+            "giff1 shows__video giff2"
+            "youtube-videos"
+            "footer footer footer";
+        grid-template-columns: 1fr;
+    }
+
+    .youtube-videos-left,
+    .youtube-videos-right {
+        flex-direction: column;
+    }
+}
+
+/*img, video {
+    max-width: 100%; /* Las imágenes y videos siempre se ajustan a su contenedor 
+}*/
+
+
+
+
+@media (min-width: 2000px) {
+    /* Ajustar tamaño de fuente para todo el contenido */
+    body {
+      font-size: 120%;
+    }
+  
+    /* Ajustar tamaño del texto en el encabezado */
+    .header__text h3 {
+      font-size: 24px;
+    }
+  
+    .header__text p {
+      font-size: 18px;
+    }
+
+    .button {
+        width: 90px; /* Aumentar ancho */
+        font-size: 18px; /* Aumentar tamaño de fuente */
+        margin-right: 80px; /* Ajustar margen derecho */
+      }
+  }
+  
+

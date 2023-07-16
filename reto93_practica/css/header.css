@@ -17,9 +17,10 @@
     grid-area: header;
 }
 
-#image {grid-area: header__image; }
-#text {grid-area: header__text; }
-#nav {grid-area: header__nav; }
+.image {grid-area: header__image; }
+.text {grid-area: header__text; }
+.nav {grid-area: header__nav; }
+
 
 /****
 *IMAGEN
