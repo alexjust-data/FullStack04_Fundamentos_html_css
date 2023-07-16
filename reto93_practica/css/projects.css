@@ -6,6 +6,13 @@
     font-family: sans-serif;                        /* utilizará estas */
 }
 
+body {
+    max-width: 1800px;
+    max-height: 1950px;
+    margin: 0 auto; /* Centra el contenido si la ventana del navegador es más ancha que 2000px */
+    overflow: auto; /* Permite el desplazamiento si el contenido supera las dimensiones máximas */
+}
+
 
 .main-bg__projects {
     display: grid;
@@ -18,7 +25,7 @@
     grid-template-rows: auto auto auto auto;
     gap: 1em;
     height: 100vh;
-    background-color: gray;
+    background-color: var(--main-text-color);
 }
 
 .header { grid-area: header; }
@@ -100,7 +107,6 @@
     }
 }
 
-
 .video-descriptions {
     display: flex;
     flex-direction: column;
@@ -111,15 +117,41 @@
     font-size: clamp(1rem, 2.5vw, 1.5rem); /* Esta línea permite que el texto se reescale entre 1rem y 1.5rem dependiendo del ancho de la pantalla. */
 }
 
+.video-descriptions strong {
+    text-decoration: underline;
+}
 
 
-/*img, video {
-    max-width: 100%; /* Las imágenes y videos siempre se ajustan a su contenedor 
-}*/
+@media (min-width: 2000px) {
+    body {
+        width: 2000px;
+        margin: 0 auto; /* Centra el contenido si la ventana del navegador es más ancha que 2000px */
+    }
+}
 
-
-
-
-
-  
-
+/***
+* ROW 4
+* 
+* NAV
+********/
+.footer__nav {
+    max-width: 150px; 
+    display: flex;              /* Flexbox para centrar el contenido horizontalmente */
+    justify-content: center;    /* Centra horizontalmente */
+    align-items: center;        /* Centra verticalmente */
+    padding-right: 8%;
+}
+.footer__nav__list {
+    list-style: none;          /* Quita los puntos de la lista */
+    display: flex;             /* Flexbox para alinear los elementos horizontalmente */
+    justify-content: center;   /* Centra elementos horizontalmente */
+    align-items: center;       /* Centra elementos verticalmente */
+    flex-direction: column;    /* Alinea elementos en una columna */
+}
+.footer__nav__list__item {
+    text-align: center;        /* Centra el texto horizontalmente */
+                               /* Más estilos aquí */
+}
+.footer__nav__list__item a {
+    text-decoration: none;     /* Quita la decoración de texto subrayado */
+}
