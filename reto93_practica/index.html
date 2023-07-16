@@ -35,67 +35,64 @@
         </div>
         <nav class="header__nav" id="nav">
             <ul class="header__nav__list">
-            <li class="header__nav__list__item">
-                <!--<img src="media/carpeta.png" alt="carpeta">-->
-                <a class="button" href="#section2">Skills</a>
-            </li>
-            <li class="header__nav__list__item">
-                <a class="button button--large" href="#section1">About</a>
-            </li>
-            <li class="header__nav__list__item">
-                <a class="button" href="#section3">Contact</a>
-            </li>
-            <!--
-            <li class="header__nav__list__item" id="giff">
-            <img src="media/giff/k-e-delgado-flame-on.gif" alt="FlameGIF">
-            </li>
-            -->
+                <li class="header__nav__list__item">
+                    <!--<img src="media/carpeta.png" alt="carpeta">-->
+                    <a class="button" href="#section2">Skills</a>
+                </li>
+                <li class="header__nav__list__item">
+                    <a class="button button--large" href="projects.html">Projects</a>
+                </li>
+                <li class="header__nav__list__item">
+                    <a class="button" href="#section3">Contact</a>
+                </li>
             </ul>
         </nav>
     </header>
 
-    <div id="habilidades">
-        <div class="grupo-habilidades">
-            <div class="habilidades">
-                <div class="habilidades__centradas">
-                    <div class="habilidades-izquierda">
-                        <div class="habilidad">
-                            <h5 class="habilidad__nombre">Reverse engineering:</h5>
-                            <!--<progress class="barra-progreso" value="7" max="10"></progress>-->
-                            <div class="barra-progreso">
-                                <div class="barra-progreso__relleno" style="width: 90%;" data-target="70"></div>
+    <div id="section2">
+        <div id="habilidades">
+            <div class="grupo-habilidades">
+                <div class="habilidades">
+                    <div class="habilidades__centradas">
+                        <div class="habilidades-izquierda">
+                            <div class="habilidad">
+                                <h5 class="habilidad__nombre">Reverse engineering:</h5>
+                                <!--<progress class="barra-progreso" value="7" max="10"></progress>-->
+                                <div class="barra-progreso">
+                                    <div class="barra-progreso__relleno" style="width: 90%;" data-target="70"></div>
+                                </div>
+                            </div>
+                            <div class="habilidad">
+                                <h5 class="habilidad__nombre">Ethical hacking:</h5>
+                                <div class="barra-progreso">
+                                    <div class="barra-progreso__relleno" style="width: 15%;" data-target="70"></div>
+                                </div>
+                            </div>
+                            <div class="habilidad">
+                                <h5 class="habilidad__nombre">Cryptography:</h5>
+                                <div class="barra-progreso">
+                                    <div class="barra-progreso__relleno" style="width: 95%;" data-target="70"></div>
+                                </div>
                             </div>
                         </div>
-                        <div class="habilidad">
-                            <h5 class="habilidad__nombre">Ethical hacking:</h5>
-                            <div class="barra-progreso">
-                                <div class="barra-progreso__relleno" style="width: 15%;" data-target="70"></div>
+                        <div class="habilidades-derecha">
+                            <div class="habilidad">
+                                <h5 class="habilidad__nombre">Social engineering:</h5>
+                                <div class="barra-progreso">
+                                    <div class="barra-progreso__relleno" style="width: 85%;" data-target="70"></div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="habilidad">
-                            <h5 class="habilidad__nombre">Cryptography:</h5>
-                            <div class="barra-progreso">
-                                <div class="barra-progreso__relleno" style="width: 95%;" data-target="70"></div>
+                            <div class="habilidad">
+                                <h5 class="habilidad__nombre">Penetration testing:</h5>
+                                <div class="barra-progreso">
+                                    <div class="barra-progreso__relleno" style="width: 100%;" data-target="70"></div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="habilidades-derecha">
-                        <div class="habilidad">
-                            <h5 class="habilidad__nombre">Social engineering:</h5>
-                            <div class="barra-progreso">
-                                <div class="barra-progreso__relleno" style="width: 85%;" data-target="70"></div>
-                            </div>
-                        </div>
-                        <div class="habilidad">
-                            <h5 class="habilidad__nombre">Penetration testing:</h5>
-                            <div class="barra-progreso">
-                                <div class="barra-progreso__relleno" style="width: 100%;" data-target="70"></div>
-                            </div>
-                        </div>
-                        <div class="habilidad">
-                            <h5 class="habilidad__nombre">Exploit development:</h5>
-                            <div class="barra-progreso">
-                                <div class="barra-progreso__relleno" style="width: 90%;" data-target="70"></div>
+                            <div class="habilidad">
+                                <h5 class="habilidad__nombre">Exploit development:</h5>
+                                <div class="barra-progreso">
+                                    <div class="barra-progreso__relleno" style="width: 90%;" data-target="70"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -116,64 +113,66 @@
         </picture>
     </main>
 
-    <div class="card">
-        <form class="form" method="post" action="registro.html"> 
-            
-            <!-- Nombre y Apellidos -->
-            <div class="form__row">
-                <div class="form__element">
-                    <label class="form__label" for="nombre">Name</label>
-                    <input class="form__input" type="text" name="name" id="name" placeholder="Add your name" required>
+    <div id="section3">
+        <div class="card">
+            <form class="form" method="post" action="registro.html"> 
+                
+                <!-- Nombre y Apellidos -->
+                <div class="form__row">
+                    <div class="form__element">
+                        <label class="form__label" for="nombre">Name</label>
+                        <input class="form__input" type="text" name="name" id="name" placeholder="Add your name" required>
+                    </div>
+                    <div class="form__element">
+                        <label class="form__label" for="surname">Surname</label>
+                        <input class="form__input" type="text" name="surname" id="surname" placeholder="Add your surname" required>
+                    </div>
                 </div>
-                <div class="form__element">
-                    <label class="form__label" for="surname">Surname</label>
-                    <input class="form__input" type="text" name="surname" id="surname" placeholder="Add your surname" required>
+        
+                <!-- Teléfono y Github -->
+                <div class="form__row">
+                    <div class="form__element">
+                        <label class="form__label" for="phone">Phone</label>
+                        <input class="form__input" type="tel" name="phone" id="phone" placeholder="Add your phone number" required>
+                    </div>
+                    <div class="form__element">
+                        <label class="form__label" for="github">Tag de Github</label>
+                        <input class="form__input" type="text" name="github" id="github" placeholder="@username" pattern="^@[^\s]+" required>
+                    </div>
                 </div>
-            </div>
     
-            <!-- Teléfono y Github -->
-            <div class="form__row">
+                        <!-- Cómo me conociste -->
+                <fieldset class="from__element">
+                    <legend>¿Como me conociste?</legend>
+                    <div>
+                        <label><input type="radio" name="source" value="universidad" required> Universidad</label>
+                        <label><input type="radio" name="source" value="kickoff" required> Keepcoding kick-off</label>
+                        <label><input type="radio" name="source" value="colegio" required> Colegio</label>
+                        <label><input type="radio" name="source" value="github" required> En Github</label>
+                    </div>
+                </fieldset>
+        
+                <!-- Mensaje -->
                 <div class="form__element">
-                    <label class="form__label" for="phone">Phone</label>
-                    <input class="form__input" type="tel" name="phone" id="phone" placeholder="Add your phone number" required>
+                    <label class="form__label" for="message">Message</label>
+                    <textarea class="form__input" type="textarea" name="message" id="message" placeholder="Add your message" required maxlength="180"></textarea>
                 </div>
+        
+                <!-- Newsletter -->
                 <div class="form__element">
-                    <label class="form__label" for="github">Tag de Github</label>
-                    <input class="form__input" type="text" name="github" id="github" placeholder="@username" pattern="^@[^\s]+" required>
+                    <label><input type="checkbox" name="newsletter" id="newsletter"> Subscribe to the newsletter</label>
                 </div>
-            </div>
-
-                    <!-- Cómo me conociste -->
-            <fieldset class="from__element">
-                <legend>¿Como me conociste?</legend>
+        
+                <!-- Botones -->
                 <div>
-                    <label><input type="radio" name="source" value="universidad" required> Universidad</label>
-                    <label><input type="radio" name="source" value="kickoff" required> Keepcoding kick-off</label>
-                    <label><input type="radio" name="source" value="colegio" required> Colegio</label>
-                    <label><input type="radio" name="source" value="github" required> En Github</label>
+                    <button type="submit">Save</button>
+                    <button type="reset">Reset</button>
                 </div>
-            </fieldset>
-    
-            <!-- Mensaje -->
-            <div class="form__element">
-                <label class="form__label" for="message">Message</label>
-                <textarea class="form__input" type="textarea" name="message" id="message" placeholder="Add your message" required maxlength="180"></textarea>
-            </div>
-    
-            <!-- Newsletter -->
-            <div class="form__element">
-                <label><input type="checkbox" name="newsletter" id="newsletter"> Subscribe to the newsletter</label>
-            </div>
-    
-            <!-- Botones -->
-            <div>
-                <button type="submit">Save</button>
-                <button type="reset">Reset</button>
-            </div>
-        </form>
-    </div>    
+            </form>
+        </div>  
+    </div>  
 
-    <footer class="footer" id="#section3">
+    <footer class="footer" id="">
         <div class="footer__media">
             <a href="https://www.twitter.com/nombredeusuario" target="_blank">
                 <img src="media/footer/tweeter.png" alt="Twitter">
@@ -189,8 +188,6 @@
             </a>
         </div>
     </footer>
-    
-    
 
 </body>
 </html>
